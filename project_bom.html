@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RobotGrrl - Fab Academy 2015</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+    function menu() {
+      $('#assignments').load("assignments_menu.html");
+      $('#project').load("project_menu.html");
+      $('#links').load("links_menu.html");
+      $('#footer').load("footer.html");
+    }
+    </script>
+
+    <style type="text/css">
+    table, th, td {
+      border: 1px solid black;
+      vertical-align: top;
+      padding: 10px;
+    }
+    #notes {
+      min-width: 300px;
+    }
+    </style>
+
+  </head>
+  <body onload="menu()">
+
+
+    <!-- nav start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">RobotGrrl - Fab Academy 2015</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assignments <span class="caret"></span></a>
+              <ul id="assignments" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Links <span class="caret"></span></a>
+              <ul id="links" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="http://fabacademy.org" target="_blank">Fab Academy</a></li>
+            
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- nav end -->
+
+
+    <div class="container">
+
+      <div class="row">
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+
+      <div class="col-md-10">
+
+        <div class="page-header">
+          <h3>RDAS v0.2 Bill of Materials</h3>
+        </div>
+
+<p><i>Work in progress</i></p>
+
+<h3>3D Printed Pieces</h3>
+
+<p>You can find the .stl files and Autodesk Inventor files for these pieces <a href="https://github.com/RobotGrrl/fabacademy/tree/master/rdas_v0.2" target="_blank">here</a></p>
+
+<table>
+<tr>
+<td>
+<b>Photo</b>
+</td>
+<td>
+<b>Name</b>
+</td>
+<td>
+<b>Quantity</b>
+</td>
+<td>
+<b>Settings</b>
+</td>
+<td id="notes">
+<b>Notes</b>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/Base.jpg" />
+</td>
+<td>
+Base
+</td>
+<td>
+1
+</td>
+<td>
+PLA
+</td>
+<td>
+Home plate for the robot essentially
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/BaseBoardsMiddle_Hole.jpg" />
+</td>
+<td>
+BaseBoardsMiddle_Hole
+</td>
+<td>
+1
+</td>
+<td>
+PLA
+</td>
+<td>
+This piece is used to support the boards, and is attached to the vertical attachment pieces from the Base
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/BaseBoardsMiddle_Top.jpg" />
+</td>
+<td>
+BaseBoardsMiddle_Top
+</td>
+<td>
+1
+</td>
+<td>
+PLA
+</td>
+<td>
+Similar to the pieces for the boards, but this one is for the very top of the vertical pieces. The height of its legs will depend on how much clearance is available to the top piece. In RDAS v0.2, I ended up having to remove the legs
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/BaseSliders.jpg" />
+</td>
+<td>
+BaseSliders
+</td>
+<td>
+1
+</td>
+<td>
+PLA
+</td>
+<td>
+This goes underneath the base, and this is the piece that slides along the floor
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/BaseVertical.jpg" />
+</td>
+<td>
+BaseVertical
+</td>
+<td>
+1
+</td>
+<td>
+PLA
+</td>
+<td>
+This goes on top of the base, and it is the piece where the vertical attachments can be attached
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/EncoderBracket.jpg" />
+</td>
+<td>
+EncoderBracket
+</td>
+<td>
+2
+</td>
+<td>
+PLA
+</td>
+<td>
+This piece attaches to the motor side attach piece. The motor encoder is mounted beneath the upper extrude
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/MotorMount_Mirror.jpg" />
+</td>
+<td>
+MotorMount_Mirror
+</td>
+<td>
+1
+</td>
+<td>
+PLA
+</td>
+<td>
+The motor will be mounted onto this bracket (with hot glue), which then gets mounted to the motor side piece
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/MotorMount.jpg" />
+</td>
+<td>
+MotorMount
+</td>
+<td>
+1
+</td>
+<td>
+PLA
+</td>
+<td>
+Same as above, but this is mirrored
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/SensorBar.jpg" />
+</td>
+<td>
+SensorBar
+</td>
+<td>
+1
+</td>
+<td>
+PLA
+</td>
+<td>
+This piece gets attached to the side piece, in RDAS v0.2's case it was the front side, and the sonar sensor and 10mm leds can be added here
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/Side.jpg" />
+</td>
+<td>
+Side
+</td>
+<td>
+2
+</td>
+<td>
+PLA
+</td>
+<td>
+The side of the robot. There are two of these. The other two are specifically for the motors.
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/SideEncoderAttach.jpg" />
+</td>
+<td>
+SideEncoderAttach
+</td>
+<td>
+2
+</td>
+<td>
+PLA
+</td>
+<td>
+This piece is used to attach the encoder bracket to. It gets mounted onto the motor side piece
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/SideLink_Light.jpg" />
+</td>
+<td>
+SideLink_Light
+</td>
+<td>
+2
+</td>
+<td>
+TPE (NinjaFlex)
+</td>
+<td>
+Flexible link for two of the more lighter weight sides. For the heavier sides (the ones with the motors) see below. These get sandwhiched between two pieces for the sides and base
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/SideLink.jpg" />
+</td>
+<td>
+SideLink
+</td>
+<td>
+2
+</td>
+<td>
+TPE (NinjaFlex)
+</td>
+<td>
+Flexible link for the heavier sides- the ones with the motors. These get sandwhiched between two pieces for the sides and base
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/SideMotor_Mirror.jpg" />
+</td>
+<td>
+SideMotor_Mirror
+</td>
+<td>
+1
+</td>
+<td>
+PLA
+</td>
+<td>
+The side piece for the motors
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/SideMotor.jpg" />
+</td>
+<td>
+SideMotor
+</td>
+<td>
+1
+</td>
+<td>
+PLA
+</td>
+<td>
+The side piece for the motors
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/SideSizeAttach.jpg" />
+</td>
+<td>
+SideSizeAttach
+</td>
+<td>
+1
+</td>
+<td>
+PLA
+</td>
+<td>
+This piece isn't necessary for the robot, but it can serve as a template to determine maximum dimensions on the side pieces when folding in
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/SideTopper.jpg" />
+</td>
+<td>
+SideTopper
+</td>
+<td>
+4
+</td>
+<td>
+PLA
+</td>
+<td>
+These are the pieces that clamp down on the flex pieces to the side piece
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/SolarFolds_Sketch-Clamp.jpg" />
+</td>
+<td>
+SolarFolds_Sketch-Clamp
+</td>
+<td>
+4
+</td>
+<td>
+PLA
+</td>
+<td>
+These are the pieces that clamp down on the solar flex pieces to the panel piece
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/SolarFolds_Sketch-Flex.jpg" />
+</td>
+<td>
+SolarFolds_Sketch-Flex
+</td>
+<td>
+4
+</td>
+<td>
+TPE (NinjaFlex)
+</td>
+<td>
+Joins the panels together and serves as a flexible hinge for folding. Attaches to the side pieces as well
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/SolarFolds_Sketch-Panel-Mirror.jpg" />
+</td>
+<td>
+SolarFolds_Sketch-Panel-Mirror
+</td>
+<td>
+4
+</td>
+<td>
+PLA
+</td>
+<td>
+The panel piece for when the robot unfolds into net form
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/SolarFolds_Sketch-Panel.jpg" />
+</td>
+<td>
+SolarFolds_Sketch-Panel
+</td>
+<td>
+4
+</td>
+<td>
+PLA
+</td>
+<td>
+The panel piece for when the robot unfolds into net form - this piece is mirrored, so you need 4 of these and 4 of the mirrored
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/Top.jpg" />
+</td>
+<td>
+Top
+</td>
+<td>
+1
+</td>
+<td>
+PLA
+</td>
+<td>
+Top of the robot - the holes are for your fingers to carry it (like a bowling ball). It can also be used to put the robot on blocks when working on it so it doesn't roll off the table
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/TopHook.jpg" />
+</td>
+<td>
+TopHook
+</td>
+<td>
+4
+</td>
+<td>
+TPE (NinjaFlex)
+</td>
+<td>
+The hooks that attach from the top piece onto the sides of the robot in folded form.
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/VerticalConnector_Longest.jpg" />
+</td>
+<td>
+VerticalConnector_Longest
+</td>
+<td>
+4
+</td>
+<td>
+PLA
+</td>
+<td>
+All 4 of these vertical pieces attach to the base vertical piece. From here, the board holder pieces attach to it.<br><br>
+Make sure to print this on its side. If it were printed standing up, the direction of the print would make it weak to break in half.
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="images/final/piece_thumbs/WheelAssembly.jpg" />
+</td>
+<td>
+WheelAssembly
+</td>
+<td>
+2
+</td>
+<td>
+PLA
+</td>
+<td>
+Attaches from the motor, and becomes the wheel. Add on the tire to the round part.<br><br>
+Print with supports, with the tire area on the build platform. Although the direction of print will make the axel weak, the wheel will guaranteed be round.
+</td>
+</tr>
+
+</table>
+
+
+
+<h3>Motor Board v1.0</h3>
+
+<a href="https://docs.google.com/spreadsheets/d/1T_9r3SQRll0dOZQRWpaxNXqfskCUHnLXMtrZkHam8I0/pubhtml" target="_blank">Open in new window</a>
+
+<br><br>
+
+<iframe src="https://docs.google.com/spreadsheets/d/1T_9r3SQRll0dOZQRWpaxNXqfskCUHnLXMtrZkHam8I0/pubhtml?widget=true&amp;headers=false" width="800px" height="600px"></iframe>
+
+<br><br>
+
+
+<h3>Sensor Board v1.0</h3>
+
+<p><i>Coming soon</i></p>
+
+
+<h3>Mechanical</h3>
+
+<p><i>Coming soon</i></p>
+
+
+      </div>
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+    </div>
+
+
+    </div>
+
+
+    <div id="footer">
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

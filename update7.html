@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RobotGrrl - Fab Academy 2015</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <script>
+    function menu() {
+      $('#assignments').load("assignments_menu.html");
+      $('#project').load("project_menu.html");
+      $('#links').load("links_menu.html");
+      $('#footer').load("footer.html");
+    }
+    </script>
+
+  </head>
+  <body onload="menu()">
+
+
+    <!-- nav start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+          </button>
+          <a class="navbar-brand" href="index.html">RobotGrrl - Fab Academy 2015</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></pre></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assignments <span class="caret"></pre></a>
+              <ul id="assignments" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Links <span class="caret"></pre></a>
+              <ul id="links" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="http://fabacademy.org" target="_blank">Fab Academy</a></li>
+            
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- nav end -->
+
+
+    <div class="container">
+
+      <div class="row">
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+
+      <div class="col-md-10">
+
+        <div class="page-header">
+          <h3>RDAS v0.1</h3><br>
+          <b>(Rapidly Deployable Automation System - drive module v0.1)</b>
+        </div>
+
+
+<img src="images/update7/rdas_smile.jpg" />
+
+<br><br>
+
+<iframe src="https://vine.co/v/OLPrxYJBumb/embed/simple" width="480" height="480" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+
+<br><br>
+
+<p>Quick <a href="https://www.youtube.com/watch?v=5fQ0CKNpbAc" target="_blank">vid</a> of the robot working with the headband:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5fQ0CKNpbAc" frameborder="0" allowfullscreen></iframe>
+
+<br><br>
+
+<img src="images/update7/rdas_cube.jpg" />
+
+
+<hr>
+
+<h3>Why</h3>
+
+<p>The point of this robot idea is to be able to create an automated system, and do some sort of task that you give it.</p>
+
+<p>This is one of the modules for my final project — the drive module.</p>
+
+<p>It folds up into a cube, and when you unlock the top, it folds outwards. The green ‘fin’ pieces are pretend solar panels, so this is how the robot could power itself.</p>
+
+<p>The four sides will eventually have a way to connect with other robots, so it can form a cluster to perform the tasks.</p>
+
+<p>The dimensions are based around a 1u CubeSat (10x10x10cm). I figured that if my robots will be helping on our planet (Earth), why not future-design them for space and other planets too.</p>
+
+<p>What makes this robot idea different than others similar to it (modular robots, for example) is a a combination of the purpose which inspires design decisions, and eventually the way user interaction will play in configuring the behaviour.</p>
+
+<p>I’m imagining these robots being able to be packed into a backpack for transport, and then deployed during a natural disaster to help with some task so that humans can work on something else. Stay tuned to the <a href="project_introduction.html">Final Project</a> page for more details.</p>
+
+
+
+<hr>
+
+<h3>Making of</h3>
+
+<p>Started out with a quick design that re-used some older flexible pieces, and placed everything temporarily together with hot glue just to make sure the dimensions and folding would work. Made some modifications and printed the updated pieces:</p>
+
+<img src="images/update7/cube_net_proto.jpg" />
+
+<p>Using gear motors for the wheels. They’re attached with a big glob of hot glue to a 3d printed piece, which is then attached with screws to a mounting plate. The mounting plate then attaches to one of the side faces.</p>
+
+<p>Top left: There is one motor that is tempermental because of its tab sort of falling off and there isn’t much room to attach a wire too</p>
+
+<p>Top right: There are encoders on the wheels — ir reflectance sensors measuring tabs on the wheel hubs. Not using them yet. I’m debating going with a hall effect sensor. Benefit of the magnets+sensor would be that they would continue to work in dusty environments.</p>
+
+<img src="images/update7/wheels_collage.jpg" />
+
+<p>Added some plates to the center of the robot, for holding the battery, the board, and the cover on top of it.</p>
+
+<img src="images/update7/base_collage.jpg" />
+
+<p>Ran into the first problem. When the sides with the wheels fold up, they run in to the plates. Fixed it by increasing the height of the bars lifting the board plate.</p>
+
+<img src="images/update7/folded_oops.jpg" />
+
+<p>Here’s what it looked like when all of the pieces finished printing and was partially assembled. You can see to the right the board is being worked on too:</p>
+
+<img src="images/update7/rdas_unfolded.jpg" />
+
+<p><a href="https://www.flickr.com/photos/robotgrrl/16900053589/in/set-72157651368259527" target="_blank">Video</a>:</p>
+
+<object type="application/x-shockwave-flash" width="400" height="225" data="https://www.flickr.com/apps/video/stewart.swf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="flashvars" value="intl_lang=en-US&photo_secret=2d592c8969&photo_id=16900053589&hd_default=false"></param><param name="movie" value="https://www.flickr.com/apps/video/stewart.swf"></param><param name="bgcolor" value="#000000"></param><param name="allowFullScreen" value="true"></param><embed type="application/x-shockwave-flash" src="https://www.flickr.com/apps/video/stewart.swf" bgcolor="#000000" allowfullscreen="true" flashvars="intl_lang=en-US&photo_secret=2d592c8969&photo_id=16900053589&hd_default=false" width="400" height="225"></embed></object>
+
+
+<p>Here is what the “board” looks like. It is boring; just an Arduino Pro Mini, L293D motor driver, some resistors for the leds, and a lot of headers for plugging in the connections to the motors and such. This takes so long compared to if I could mill it...... :/</p>
+
+<img src="images/update7/board_collage.jpg" />
+
+<p>Although the smoke test was fine and the led blinked, there was a problem. It just seemed like everything wasn’t working properly. Can you see the small mistake?</p>
+
+<img src="images/update7/spot_the_error.jpg" />
+
+<p>The connection wasn’t soldered over completely!</p>
+
+<img src="images/update7/solder_mistake.jpg" />
+
+<p>Fixed it:</p>
+
+<img src="images/update7/solder_fix.jpg" />
+
+<p>This was another weird mistake that I made when soldering. I don’t really know how this happened. The wire wasn’t attaching to the solder, then when I flipped the board over it looked like this. Easy to fix, but still pretty weird:</p>
+
+<img src="images/update7/weird_thing.jpg" />
+
+<p>Everything was assembled together, all the screws added too. Here’s what the robot looks like when folded up:</p>
+
+<img src="images/update7/cube_collage.jpg" />
+
+<p>Here’s what it looks and sounds like when unfolding (the sound is kinda cool):</p>
+
+<p><a href="https://www.flickr.com/photos/robotgrrl/16878893107/in/set-72157651368259527" target="_blank">Vid</a>:</p>
+
+<object type="application/x-shockwave-flash" width="400" height="225" data="https://www.flickr.com/apps/video/stewart.swf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="flashvars" value="intl_lang=en-US&photo_secret=afbde68a0d&photo_id=16878893107&hd_default=false"></param><param name="movie" value="https://www.flickr.com/apps/video/stewart.swf"></param><param name="bgcolor" value="#000000"></param><param name="allowFullScreen" value="true"></param><embed type="application/x-shockwave-flash" src="https://www.flickr.com/apps/video/stewart.swf" bgcolor="#000000" allowfullscreen="true" flashvars="intl_lang=en-US&photo_secret=afbde68a0d&photo_id=16878893107&hd_default=false" width="400" height="225"></embed></object>
+
+
+<p>Here is a little demo of the distance sensor in action:</p>
+
+<p><a href="https://www.flickr.com/photos/robotgrrl/17085565621/in/set-72157651368259527" target="_blank">Vid</a>:</p>
+
+<object type="application/x-shockwave-flash" width="400" height="225" data="https://www.flickr.com/apps/video/stewart.swf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="flashvars" value="intl_lang=en-US&photo_secret=5dcf78bbe4&photo_id=17085565621&hd_default=false"></param><param name="movie" value="https://www.flickr.com/apps/video/stewart.swf"></param><param name="bgcolor" value="#000000"></param><param name="allowFullScreen" value="true"></param><embed type="application/x-shockwave-flash" src="https://www.flickr.com/apps/video/stewart.swf" bgcolor="#000000" allowfullscreen="true" flashvars="intl_lang=en-US&photo_secret=5dcf78bbe4&photo_id=17085565621&hd_default=false" width="400" height="225"></embed></object>
+
+
+
+<hr>
+
+<h3>Electronics</h3>
+
+<ul>
+<li> Arduino Pro Mini</li>
+<li> L293D</li>
+<li> 2x 120:1 Micro gear motor</li>
+<li> 2x encoders</li>
+<li> 2x 10mm white leds</li>
+<li> ultrasonic sensor</li>
+<li> 5mm blue led</li>
+<li> resistors</li>
+<li> some perf board...</li>
+</ul>
+
+<p>The battery that was shown in some of the pics is a 2200 mAh Li-Ion 11.1V. It was not able to power the robot. Whenever the motors would turn on, the controller would brown out. The batt used to be used for my hockey humanoid, which used more power than this.</p>
+
+<p>Need to go back and investigate this. My first guess is because it is aging (batt is 6 years old), however it could also be because it might be running through a voltage regulator on the arduino pro mini that limits the current. It works fine when powering through usb, which does not have a regulator. So I have to go back and check this (or at least, keep it in mind for when designing the board base).</p>
+
+
+
+<hr>
+
+<h3>Mechanical</h3>
+
+<ul>
+<li> 6-32 3/8” screws</li>
+<li> 6-32 1/2” screws</li>
+<li> 6-32 hex nuts</li>
+</ul>
+
+
+
+
+<hr>
+
+<h3>Printing</h3>
+
+<ul>
+<li> PLA for sides, base, fins</li>
+<li> TPE (NinjaFlex) for white flexible pieces</li>
+</ul>
+
+
+
+<hr>
+
+<h3>Small detail: screw types</h3>
+
+<p>I learned a valuable lesson from a master robot builder about the types of screws used in my robot design.</p>
+
+<p>First of all, the 6-32 is too large for the robot. Can get away with something smaller. But, there were various types of screws that I used. Ones were button / flat heads, and there were others that were countersunk.</p>
+
+<p>The problem with countersunk screws is that they want to keep digging in to the material. So it is essentially stretching out some of the material around the hole in my designs.</p>
+
+<p>Since my pieces are rather thin and flimsy, it is possible that with a countersunk screw, it could have added some warping or distortion to the piece. Which then causes a difference when it is folding back up to attach to the top piece.</p>
+
+<p>The bigger lesson learned here is that you should always care about *everything* that goes into the construction of your robot, even the small things like the screws.</p>
+
+
+
+<hr>
+
+<h3>Source</h3>
+
+The source files can be found <a href="https://github.com/RobotGrrl/fabacademy/tree/master/rdas_v0.1" target="_blank">here</a>
+
+
+
+
+<hr>
+
+<h3>Mistakes made</h3>
+
+<p>The green ‘fins’ (aka, pretend solar panels) were supposed to fold inside of the robot. Didn’t take into consideration the dimensions of the screws and nuts, so it did not fold completely flush.</p>
+
+<p>Didn’t check the soldered glob if it was connected properly when soldering it together</p>
+
+<p>Didn’t really take into account the folding of the sides into the main area of the robot</p>
+
+
+
+<hr>
+
+<h3>Lessons learned</h3>
+
+<p>Need to create some sort of folding spec, for when the sides fold into the main area. There should be a max length and width with a max height on the side, and the main area should be able to accept this in its design too</p>
+
+<p>Check the thing that you are soldering before moving on to the next thing</p>
+
+<p>Having many metal screws on your robot makes it surprisingly heavy</p>
+
+
+
+
+<hr>
+
+<h3>Still wondering about</h3>
+
+<p>Making robot drive in a straight line / wheel sensors— use magnets + hall effect sensors?</p>
+
+<p>The dimensions of the flexible pieces- do they fold as a perfect corner? All the time? Or is it sometimes on an angle? What should it be?</p>
+
+<p>How can an end-effector unfold from such a design</p>
+
+<p>What could be the max power harnessed from the size of the ‘solar panels’?</p>
+
+
+
+
+<hr>
+
+<h3>Future revisions</h3>
+
+<p>This was cool for a first start. But there’s so much more work to go.</p>
+
+<p>Is there a way to make the flexible pieces as laser cut flexures? Would this be stronger or not as strong?</p>
+
+<p>It would be neat if there was some sort of spring-loaded lock that could make the sides not bow with the weight of the main area, when it is unfolded. (So it wouldn’t be dragging on the ground as the wheels are moving)</p>
+
+<p>Need to design a way for the top piece to connect with the sides, and that connector on the sides be able to be used for aligning a connecting robot.</p>
+
+<p>The whole top piece needs fixing.</p>
+
+<p>Need to make sure the dimensions comply with CubeSat standard.</p>
+
+<p>The board should be one ‘level’ in the main area of the robot.</p>
+
+<p>Similar to the curl mech pt 2, can use a bar that goes across the flex piece, instead of 3 screws.</p>
+
+<p>My idea for integrating it with the headband is that the headband will be used to give feedback to the robot by nodding or shaking your head. This would let the human give feedback to the robot if it does a step of the automation wrong. The robots would then take that feedback and go back and recalculate what it should be doing. Not sure if I’ll be able to get this done in time for demo day though.</p>
+
+
+
+
+      </div>
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+    </div>
+
+
+    </div>
+
+
+    <div id="footer">
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

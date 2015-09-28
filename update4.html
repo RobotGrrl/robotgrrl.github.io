@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RobotGrrl - Fab Academy 2015</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <script>
+    function menu() {
+      $('#assignments').load("assignments_menu.html");
+      $('#project').load("project_menu.html");
+      $('#links').load("links_menu.html");
+      $('#footer').load("footer.html");
+    }
+    </script>
+
+  </head>
+  <body onload="menu()">
+
+
+    <!-- nav start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+          </button>
+          <a class="navbar-brand" href="index.html">RobotGrrl - Fab Academy 2015</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></pre></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assignments <span class="caret"></pre></a>
+              <ul id="assignments" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Links <span class="caret"></pre></a>
+              <ul id="links" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="http://fabacademy.org" target="_blank">Fab Academy</a></li>
+            
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- nav end -->
+
+
+    <div class="container">
+
+      <div class="row">
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+
+      <div class="col-md-10">
+
+        <div class="page-header">
+          <h3>Headband (pt 1)</h3>
+        </div>
+
+
+<img src="images/update4/headband_collage.jpg" />
+<br><br>
+<img src="images/update4/headband_result.jpg" />
+
+<br>
+
+<p>Read on below for the making of and fun photos of beta testing!</p>
+
+<br>
+
+<hr>
+
+<h3>Why</h3>
+
+<p>The robot for my final project should be able to be controlled hands free. If the operator has their hands full (literally), but still needs to give feedback to the robots, it would be too cumbersome to go press buttons on a tablet.</p>
+
+<p>It would be neat if I could have the robots respond if you begin feeling apprehensive. So I included a pulse sensor to detect heartbeat.</p>
+
+<p>Skipping ahead a few weeks I guess, but wanted to get started on the input, output, and networking.</p>
+
+<p>I started out wanting it to be brain controlled, but to get started am just going with an imu approach. An inspiration to this project is in the movie Big Hero 6 one of the characters wears a headband to control robots.</p>
+
+<p>I wasn’t sure exactly how this could all be made together, especially with the flexibility aspect. So I started first with a prototype and will refine it, using everything new that I will learn!</p>
+
+<p>Also... the headband does have servos on it moving wings. So if you wear it, you can turn into a robot kind of. :)</p>
+
+<hr>
+
+<h3>Making of</h3>
+
+<p>To start I made a cardboard model first and took some measurements. From there, noted the general sizes of the boards and made the design in gEDA. On the boards would actually be the breakout board modules -- because my design tolerances are not good enough for a soic chip, and dip packages would take up too much area. Set up the boards for etching and started the process.</p>
+
+<img src="images/update4/board_setup.jpg" />
+
+<p>After knowing the board dimensions, created the band pieces in Autodesk Inventor. Printed out a drawing of the pieces onto paper, traced the design onto a duo-tang, and cut it out. Glued the edges of the pieces down as well, because if a corner lifts it is easy for it to peel apart. There’s velcro at the end of the band to accommodate different head sizes.</p>
+
+<img src="images/update4/band_setup.jpg" />
+
+<p>Designed and 3d printed the servo holders in Inventor. The servo horn is sandwiched between two pieces. There’s a curved cover that goes over the last piece. The tabs on the servo holder were later glued onto the band.</p>
+
+<img src="images/update4/servo_setup.jpg" />
+
+<p>Checked on the boards and it was no good. The resist detached from the boards.</p>
+
+<img src="images/update4/boards_etching.jpg" />
+
+<p>I made a really stupid mistake of deciding that it would be better to use sharpie on the traces than it would be to clean it and try adding the resist again. This was not the right choice, and I feel bad for wasting copper, water, etchant, time. :(</p>
+
+<img src="images/update4/board_failed_etching.jpg" />
+
+<p>Since the point of making this prototype was to see if it would all work, I decided to keep going but use breakout boards and wires. The detriment to this is that I would have to waste even more time wiring everything together, when the boards should have worked out but didn’t. Lame.</p>
+
+<p><i>Aside: Yes, it is possible to mill a flex pcb- Adafruit posted a video showing a strip of ws2812b’s on Pyralux using an Othermill</i></p>
+
+<p>Wired everything together and wrote a quick demo sketch to make sure that everything was working together.</p>
+
+<img src="images/update4/wiring_test.jpg" />
+
+<p>Glued the boards to the band with a lot of glue so they would not pop off.</p>
+
+<img src="images/update4/hot_glue_everything.jpg" />
+
+<p>Test vid:</p>
+
+<object type="application/x-shockwave-flash" width="400" height="225" data="https://www.flickr.com/apps/video/stewart.swf" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="flashvars" value="intl_lang=en-US&photo_secret=fa015a0b32&photo_id=16695308717&hd_default=false"></param><param name="movie" value="https://www.flickr.com/apps/video/stewart.swf"></param><param name="bgcolor" value="#000000"></param><param name="allowFullScreen" value="true"></param><embed type="application/x-shockwave-flash" src="https://www.flickr.com/apps/video/stewart.swf" bgcolor="#000000" allowfullscreen="true" flashvars="intl_lang=en-US&photo_secret=fa015a0b32&photo_id=16695308717&hd_default=false" width="400" height="225"></embed></object>
+
+
+
+
+<hr>
+
+<h3>Covers</h3>
+
+<p>Next up was the covers over the electronics. This was printed in TPE (NinjaFlex). But first, had a problem with the prints that confused me for way too long. The answer was simply because the filament was coiled around the axel...</p>
+
+<img src="images/update4/ninjaflex_error.jpg" />
+
+<p>After fixing this, the covers were made. But they had issues bending. The middle one did not adapt to the shape of the band. I tried cutting spaces out of the pieces that attach to the band, but that still did not work. Then realised that the flat face was too thick.</p>
+
+<img src="images/update4/cover_design.jpg" />
+
+<p>Reprinted with less thickness and it worked! The cover could adapt to the shape of the band.</p>
+
+<img src="images/update4/covers_flex.jpg" />
+
+<p>Added the wings and a piece of the duo-tang to cover the servo holder holes.</p>
+
+<img src="images/update4/wings_attached.jpg" />
+
+<p>Wing:</p>
+
+<center><script src="https://embed.github.com/view/3d/RobotGrrl/Headband_v0.1/master/Wings/EarWing.stl"></script></center>
+
+<p>Cover:</p>
+
+<center><script src="https://embed.github.com/view/3d/RobotGrrl/Headband_v0.1/master/Cover/BandMiddleCover.stl"></script></center>
+
+
+
+
+<hr>
+
+<h3>Small Improvements</h3>
+
+<p>After demonstrating it to friends, I noticed that there were some improvements that could be made.</p>
+
+<p>The first was to be able to have different modes in the headband, so added 3 buttons. The first button is what sets the ‘home’ readings of the accel and gyro, then starts to send the pitch data through the xbee to the other robot.</p>
+
+<img src="images/update4/control_buttons.jpg" />
+
+<p>Next was the cable. Ideally it would be best if the battery was added to the headband, or if there was a thinner tether to the battery pack. The small tether option will be better. For programming with the ftdi header though, the problem would still exist. Added a duo-tang strain relief (hopefully), that the cable goes through to prevent it from being pulled out and ripping off the cover.</p>
+
+<p>Finally, the accelerometer alone was not very good at measuring the head tilt of a person. I dug out a gyro from my (retired) hockey playing humanoid. Attaching it was an ordeal, because there wasn’t any room for it... so it’s hot glued piggy backed to the accelerometer.</p>
+
+<img src="images/update4/gyro_attached.jpg" />
+
+
+
+<hr>
+
+<h3>Code</h3>
+
+<p>The pulse sensor uses Timer 2. Standard servo library uses Timer1, but Neopixels library turns off interrupts when updating the leds -- and the Arduino servo library requires this. But, there are peripherals in the avr that can be used. The servos can get their pwm from a timer/counter. Timer1 is 16 bit, so this is used in waveform generation mode with a prescaler. It advances a counter every 8 cpu cycles, then is sent as pwm to the motors by setting an output compare register of the wanted pwm duty cycle to a pin. There are some values that depend on the clock speed of the avr. This is from the <a href="https://learn.adafruit.com/neopixels-and-servos/introducing-avr-peripherals" target="_blank">TiCo Servo documentation</a> on Adafruit.</p>
+
+<p>Whenever the servos move, the pulse sensor becomes unstable. It ‘glitches’ and detects too many pulses. Think this is caused by a quick decrease in voltage, but still have to test to make sure.</p>
+
+<p>Using a complimentary filter for combining the accelerometer and gyro sensor readings to get an estimated pitch.</p>
+
+
+
+
+<hr>
+
+<h3>Complementary Filter</h3>
+
+<p>Here is the main part of the code that combines the accelerometer and gyro data together. It’s called the complementary filter, it is just a number that defines the ratio between the gyro and accel that gets combined into the actual pitch.</p>
+
+<p>Zero the sensor to remove drift at the start of program and right after the button press:</p>
+
+<pre class="prettyprint">
+x_home = analogRead(X_PIN);
+y_home = analogRead(Y_PIN);
+z_home = analogRead(Z_PIN);  
+
+gyro_home = analogRead(GYRO_PIN);
+gyro_zero_voltage = ( gyro_home * max_voltage ) / 1023;
+</pre>
+
+<p>Accelerometer readings calculations:</p>
+
+<pre class="prettyprint">
+xval = 5*(analogRead(X_PIN)/1023);
+yval = 5*(analogRead(Y_PIN)/1023);
+zval = 5*(analogRead(Z_PIN)/1023);
+
+x_acc = (xval-x_home)/acc_scale;
+y_acc = (yval-y_home)/acc_scale;
+z_acc = (zval-z_home)/acc_scale;
+
+acc_pitch = atan(x_acc / sqrt( pow(y_acc,2) + pow(z_acc,2) ) );
+acc_roll = atan(y_acc / sqrt( pow(x_acc,2) + pow(z_acc,2) ) );
+
+acc_pitch *= 180/PI;
+acc_roll *= 180/PI;
+</pre>
+
+<p>Gyro readings calculations:</p>
+
+<pre class="prettyprint">
+gyro_voltage = ( analogRead(GYRO_PIN) * max_voltage ) / 1023;
+gyro_rate = (gyro_voltage - gyro_zero_voltage) / gyro_scale;
+
+if(gyro_rate > rotation_thresh || gyro_rate < -rotation_thresh) {
+  gyro_pitch = gyro_pitch + gyro_rate * (current_time-last_measure_time)/1000.0;
+  last_measure_time = current_time;
+}
+  
+if(gyro_pitch > 360) gyro_pitch -= 360;
+if(gyro_pitch < -360) gyro_pitch += 360;
+</pre>
+
+<p>Complementary filter:</p>
+
+<pre class="prettyprint">
+pitch = alpha*gyro_pitch + (1-alpha)*acc_pitch;
+</pre>
+
+
+
+
+
+<hr>
+
+<h3>Future</h3>
+
+<p>This was just a start. I have a better idea on how to fabricate this now, provided I can get access to the right tools (remote student). Really excited to see if it can be laser cut from one piece of delrin.</p>
+
+<p>As for the boards, the best way to go seems to be a rigid pcb on both sides of the head, and perhaps vinyl cut copper tape for the front part with the leds... though I think that might be difficult to manufacture, so maybe just an actual flex pcb -- or rigid pcbs with wires going between them. For connecting the boards together, will probably just use ribbon cable. Another option would be a flexible interconnect cable, however not sure what the cost is of the connector component.</p>
+
+<p>I might port the wings to Antimony, so that way it can be easier for other people to customise their own wings.</p>
+
+<p>In the future revisions, will be using sensors that have multiple dof. Instead of just the one for the gyro. This way we will be able to measure more data.</p>
+
+
+
+
+<hr>
+
+<h3>Electronics</h3>
+
+<ul>
+<li> <a href="https://www.tindie.com/products/dustinandrews/extracore/" target="_blank">ExtraCore (Arduino derivative)</a></li>
+<li> <a href="http://pulsesensor.com/" target="_blank">Pulse sensor</a></li>
+<li> <a href="http://www.adafruit.com/product/163" target="_blank">ADXL335</a></li>
+<li> 2x <a href="http://www.robotshop.com/en/dfrobot-micro-servo-motor.html" target="_blank">9g Micro servo</a></li>
+<li> 5x <a href="http://www.spikenzielabs.com/Catalog/index.php?main_page=product_info&cPath=26_158&products_id=1064" target="_blank">WS2812B breakout boards</a></li>
+<li> <a href="http://www.adafruit.com/products/128" target="_blank">Xbee</a></li>
+<li> <a href="http://www.adafruit.com/products/126" target="_blank">Xbee breakout board</a></li>
+<li> 3x <a href="http://www.adafruit.com/products/367" target="_blank">Buttons</a></li>
+<li> <a href="https://www.sparkfun.com/products/9088" target="_blank">Light sensor</a></li>
+<li> <a href="https://www.sparkfun.com/products/retired/8372" target="_blank">Gyro- MLX90609</a></li>
+<li> Portable phone charging battery pack</li>
+</ul>
+
+
+
+<hr>
+
+<h3>Background Info</h3>
+
+<p>The design tolerances of making my own boards is excessively large because I have to use 3d printed TPE, with a nozzle size of 0.4mm, as the resist on the copper. I tried laser printing onto photo paper, but the clothes iron does not reach the same temp as the laser printer to be able to transfer the toner onto the copper. I have made the resist work in the past, so it’s unfortunate that it did not work out this time.</p>
+
+<p><i>Aside: Of course, I'm always looking for better ways of doing things, just finding the tools/supplies is sometimes difficult</i></p>
+
+
+
+<hr>
+
+<h3>Beta Testing</h3>
+
+<p>Here is the best part!!!!!!! Tested it with some people at RoboGames 2015. They were all able to control the robot.</p>
+
+<p>In the top pic, Grant is controlling the robot to speed off the table, I’m reaching to catch it in time... :) Bottom left pic is an amazing humanoid robot builder, and right is a fan of all the robots.</p>
+
+<img src="images/update4/headband_beta_test.jpg" />
+
+
+
+<hr>
+
+<h3>Source Files</h3>
+
+<p>The source files can be found <a href="https://github.com/RobotGrrl/fabacademy/tree/master/headband_v0.1" target="_blank">here</a>
+<br><br>
+Design files are Autodesk Inventor. Circuit boards are gEDA. Code is just an Arduino sketch.</p>
+
+
+
+<hr>
+
+<h3>Mistakes made</h3>
+
+<ul>
+<li> Not considering how this can be disassembled for transport</li>
+<li> Possibly not roughening the surface of the copper enough</li>
+<li> Not getting toner transfer method to work</li>
+<li> Filament spooling around holder and messing up the print</li>
+<li> Not considering extra space for future expandable options</li>
+</ul>
+
+
+
+<hr>
+
+<h3>Lessons learned</h3>
+
+<ul>
+<li> If the resist is not on properly, then it won’t etch right!!!!!!!!!</li>
+<li> Sharpie permanent marker does not give good results as an etch resist</li>
+<li> My etching process fails more often than succeeds</li>
+</ul>
+
+
+
+<hr>
+
+<h3>Still wondering about</h3>
+
+<ul>
+<li> Would it be possible to do gaze detection on the eye from the angle of the headband</li>
+<li> Why the resist did not adhere to the copper, when doing the same thing worked flawlessly in the past</li>
+<li> How to attach flexible things together permanently without using hot glue</li>
+<li> Power concerns- what will be the best way to isolate the servo and uc power</li>
+<li> Wondering if a thin piece of delrin could be laser cut to replicate the band faster, and all in one piece rather than using hot glue</li>
+<li> Finding a better way to attach the covers to the band</li>
+<li> Health concerns of having a radio and servos attached to your head</li>
+<li> How crazy / weird other people think this wearable is. Maybe should walk down a main street wearing it to see the reactions (<-- probably will not do this)</li>
+</ul>
+
+
+
+<hr>
+
+<h3>Other Observations</h3>
+
+<ul>
+<li> Kids seem to really like it, even if it isn’t measuring brain waves</li>
+<li> The weight of the servos tends to move the headband down, which can be uncomfortable after a bit of time</li>
+<li> With some improvements, it can be a fun way to interact with the robots hand free</li>
+</ul>
+
+
+
+
+
+
+      </div>
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+    </div>
+
+
+    </div>
+
+
+    <div id="footer">
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

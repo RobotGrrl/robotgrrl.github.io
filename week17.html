@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RobotGrrl - Fab Academy 2015</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <script>
+    function menu() {
+      $('#assignments').load("assignments_menu.html");
+      $('#project').load("project_menu.html");
+      $('#links').load("links_menu.html");
+      $('#footer').load("footer.html");
+    }
+    </script>
+
+  </head>
+  <body onload="menu()">
+
+
+    <!-- nav start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+          </button>
+          <a class="navbar-brand" href="index.html">RobotGrrl - Fab Academy 2015</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></pre></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assignments <span class="caret"></pre></a>
+              <ul id="assignments" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Links <span class="caret"></pre></a>
+              <ul id="links" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="http://fabacademy.org" target="_blank">Fab Academy</a></li>
+            
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- nav end -->
+
+
+    <div class="container">
+
+      <div class="row">
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+
+      <div class="col-md-10">
+
+        <div class="page-header">
+          <h3>Invention, Intellectual Property, and Income</h3>
+        </div>
+
+<h3>Intent</h3>
+
+<p>There are currently three tracks that RDAS is on. The original purpose, the moonshot, and project development.</p>
+
+<p>For Fab Academy and the global Fab Lab network, the main focus is on the project development track.</p>
+
+<p>The project development involves using the robot design to accomplish some task, repurposing the robot to do something different, and building on the functionality. In the future, it could evolve into a platform for robotic experimentation with modularity, systems.</p>
+
+<p>One of the goals of RDAS is to have groups developing on it, so that the robots could be deployed locally if there is a scenario where the robots can help. The experience could then be shared globally and go to all of the other labs working with RDAS, to improve an action plan for how the robots can be used to help in various scenarios.</p>
+
+
+
+<h3>Milestones</h3>
+
+<p>There are a few milestones to hit before getting RDAS into people’s hands:</p>
+
+<h4>Generic RDAS Chassis Design</h4>
+
+<p>The first of which would be to create a generic RDAS chassis, based off of the CubeSat dimensions, but with a better way of folding and unfolding. With this, people would be able to add in their own devices to the sides of the cube, and have it fold inwards properly. The electronics would be an Arduino derivative, with easily pluggable ports for various peripherals.</p>
+
+<p>The work done here with making RDAS Drive module is helpful towards going to this milestone.</p>
+
+<h4>Field Testing</h4>
+
+<p>The ultimate tests will be to see how well the robot modules perform outdoors, in the real environment. It has to be able to work! Trying, failing, fixing things, will be the way this milestone is accomplished.</p>
+
+
+
+<h3>Dissemination</h3>
+
+<p>Building the community around RDAS will be important to reach the people who would be interested in it and would use it.</p>
+
+<p>One of the ways to get the project into the hands of developers would be to launch a crowdfunding campaign selling the developer kits. With multiple people purchasing, it would cost less than making just one. It would also be a good time for a bunch of developers to work on a project together (through the internet).</p>
+
+<p>Another way would be to contact various Fab Labs and see if any of the members would be interested in working on it. There is the Fab Connection grant that could help fund this, further down the line.</p>
+
+<p>Getting feedback from makers who adopt RDAS will be important. For everyone to communicate with each other, considering a forum. For smaller teams, considering using Slack.</p>
+
+<p>The RDAS robots created for the project development track would be open source. Specifically, CC BY. The code would also be open source using the MIT license.</p>
+
+
+
+      </div>
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+    </div>
+
+
+    </div>
+
+
+    <div id="footer">
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

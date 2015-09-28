@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RobotGrrl - Fab Academy 2015</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+    function menu() {
+      $('#assignments').load("assignments_menu.html");
+      $('#project').load("project_menu.html");
+      $('#links').load("links_menu.html");
+      $('#footer').load("footer.html");
+    }
+    </script>
+
+    <style type="text/css">
+    table, th, td {
+      border: 1px solid black;
+      vertical-align: top;
+      padding: 10px;
+    }
+    #notes {
+      min-width: 300px;
+    }
+    </style>
+
+  </head>
+  <body onload="menu()">
+
+
+    <!-- nav start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">RobotGrrl - Fab Academy 2015</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assignments <span class="caret"></span></a>
+              <ul id="assignments" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Links <span class="caret"></span></a>
+              <ul id="links" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="http://fabacademy.org" target="_blank">Fab Academy</a></li>
+            
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- nav end -->
+
+
+    <div class="container">
+
+      <div class="row">
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+
+      <div class="col-md-10">
+
+        <div class="page-header">
+          <h3>RDAS v0.2 Electronics</h3>
+        </div>
+
+<p>
+  Dimensions: 7.84 cm x 5.96 cm<br>
+  Layers: 2<br>
+  Trace width: 7mil<br>
+  Larger trace width: 30mil<br>
+  Clearance: 10mil<br>
+  Via drill width: 15mil<br>
+  Via copper width: 35mil<br>
+  Via annulus: 10mil<br>
+  Mounting hole diameter: 4mm<br>
+</p>
+
+<h3>Motor Board v1.0</h3>
+
+<p>Bill of materials available <a href="https://docs.google.com/spreadsheets/d/1T_9r3SQRll0dOZQRWpaxNXqfskCUHnLXMtrZkHam8I0/pubhtml" target="_blank">here</a></p>
+
+<p>Source .pcb file and gerbers available <a href="https://github.com/RobotGrrl/fabacademy/tree/master/motor_board_v1.0" target="_blank">here</a></p>
+
+<p><b>gEDA</b></p>
+
+<p>Front:</p>
+
+<img src="images/final/electronics/motor_front_geda.jpg" />
+
+<p>Back:</p>
+
+<img src="images/final/electronics/motor_back_geda.jpg" />
+
+
+<p><b>OSH Park</b></p>
+
+<p>Front:</p>
+
+<img src="images/final/electronics/motor_front_oshpark.jpg" />
+
+<p>Back:</p>
+
+<img src="images/final/electronics/motor_back_oshpark.jpg" />
+
+
+<p><b>Pinout:</b></p>
+
+<p><a href="https://docs.google.com/spreadsheets/d/1LlQ5uIKe1PynVcyj8L-FYj3ALGsRrBvFQ7i7EvaG2nw/pubhtml?gid=0&single=true" target="_blank">Open in new window</a></p>
+
+<iframe src="https://docs.google.com/spreadsheets/d/1LlQ5uIKe1PynVcyj8L-FYj3ALGsRrBvFQ7i7EvaG2nw/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="800px" height="600px"></iframe>
+
+
+<p><b>Connectors:</b></p>
+
+<p><a href="https://docs.google.com/spreadsheets/d/1BuAOsEZYxxoL_0D5qq3omPNUV8JjT5pEpe90uYyg8h0/pubhtml?gid=0&single=true" target="_blank">Open in new window</a></p>
+
+<iframe src="https://docs.google.com/spreadsheets/d/1BuAOsEZYxxoL_0D5qq3omPNUV8JjT5pEpe90uYyg8h0/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="800px" height="600px"></iframe>
+
+
+
+<h3>Sensor Board v1.0</h3>
+
+<p><i>Bill of materials coming soon</i></p>
+
+<p>Source .pcb file and gerbers available <a href="https://github.com/RobotGrrl/fabacademy/tree/master/sensor_board_v1.0" target="_blank">here</a></p>
+
+<p><b>gEDA</b></p>
+
+<p>Front:</p>
+
+<img src="images/final/electronics/sensor_front_geda.jpg" />
+
+<p>Back:</p>
+
+<img src="images/final/electronics/sensor_back_geda.jpg" />
+
+
+
+<p><b>OSH Park</b></p>
+
+<p>Front:</p>
+
+<img src="images/final/electronics/sensor_front_oshpark.jpg" />
+
+<p>Back:</p>
+
+<img src="images/final/electronics/sensor_back_oshpark.jpg" />
+
+
+<p><b>Pinout</b></p>
+
+<p><a href="https://docs.google.com/spreadsheets/d/1LlQ5uIKe1PynVcyj8L-FYj3ALGsRrBvFQ7i7EvaG2nw/pubhtml?gid=1124540505&single=true" target="_blank">Open in new window</a></p>
+
+<iframe src="https://docs.google.com/spreadsheets/d/1LlQ5uIKe1PynVcyj8L-FYj3ALGsRrBvFQ7i7EvaG2nw/pubhtml?gid=1124540505&amp;single=true&amp;widget=true&amp;headers=false" width="800px" height="600px"></iframe>
+
+
+
+<p><b>Connectors:</b></p>
+
+<p><a href="https://docs.google.com/spreadsheets/d/1BuAOsEZYxxoL_0D5qq3omPNUV8JjT5pEpe90uYyg8h0/pubhtml?gid=1786503307&single=true" target="_blank">Open in new window</a></p>
+
+<iframe src="https://docs.google.com/spreadsheets/d/1BuAOsEZYxxoL_0D5qq3omPNUV8JjT5pEpe90uYyg8h0/pubhtml?gid=1786503307&amp;single=true&amp;widget=true&amp;headers=false" width="800px" height="600px"></iframe>
+
+
+
+
+      </div>
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+    </div>
+
+
+    </div>
+
+
+    <div id="footer">
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

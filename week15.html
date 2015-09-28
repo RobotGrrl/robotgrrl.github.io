@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RobotGrrl - Fab Academy 2015</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <script>
+    function menu() {
+      $('#assignments').load("assignments_menu.html");
+      $('#project').load("project_menu.html");
+      $('#links').load("links_menu.html");
+      $('#footer').load("footer.html");
+    }
+    </script>
+
+  </head>
+  <body onload="menu()">
+
+
+    <!-- nav start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+          </button>
+          <a class="navbar-brand" href="index.html">RobotGrrl - Fab Academy 2015</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></pre></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assignments <span class="caret"></pre></a>
+              <ul id="assignments" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Links <span class="caret"></pre></a>
+              <ul id="links" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="http://fabacademy.org" target="_blank">Fab Academy</a></li>
+            
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- nav end -->
+
+
+    <div class="container">
+
+      <div class="row">
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+
+      <div class="col-md-10">
+
+        <div class="page-header">
+          <h3>Applications and Implications</h3>
+        </div>
+
+<h3>Problem</h3>
+
+<p>The overall problem that we are trying to solve is being able to rapidly deploy a system of automated movement. Instead of the objects around us being stationary, what if we could enable them to move around and interact with us. We could use robot modules that link together to combine steps of movements. It would be a reconfigurable way of making the stationary objects move around.</p>
+
+<p>An example mission of this would be for use in natural disaster settings during the humanitarian efforts. The robot modules would be unpacked from a backpack, then configured and linked together to perform a task. Tasks can vary depending on the scenario, such as sorting supplies to go to a specific area, or even digging out areas to let standing water flow away from shelter locations. By having the robots help with tasks the effort is in parallel with the human, freeing up time for the human to do complex decision making jobs.</p>
+
+<p>Being able to achieve the level of parallelization is a key part to the problem; the robots won’t be very helpful if they have to be controlled all the time. They have to be able to do their task as autonomously as possible and when there is human input they have to understand what is trying to be communicated.</p>
+
+<p>The goal of this is to eventually get the robots out in the field helping. It will take a long time with a lot of failures to get to that point. It’s all with another moonshot in mind: if the robots will be good enough for Earth, then what is stopping us from making them good enough for other planets as well. The robots could be tasked with starting to build structures on Mars, or go exploring, try to grow a plant (challenging in difficult environments).</p>
+
+
+
+<h3>Fab Academy Final Project</h3>
+
+<p>The first step towards working on the problem is to create one of the robot modules.</p>
+
+<p>For the final project, I’m creating the Rapidly Deployable Automation System (RDAS) Drive module.</p>
+
+<p>The dimensions of the robot will be based around a 1u CubeSat. When the robot unfolds from its cube, it will drive around. Using its distance sensor, it will detect and avoid obstacles. The position of the robot will be tracked using encoders on the wheels.</p>
+
+<p>Control from the human will use a Tele-operational Headband that tracks the movement of the wearer’s head, and sends the data to RDAS Drive to adjust the motor speeds.</p>
+
+
+
+<h3>Prior Art</h3>
+
+<p>Here are projects that are somewhat similar to RDAS. There are even more, but these are the top 3.</p>
+
+<h4><a href="http://en.wikipedia.org/wiki/CubeSat" target="_blank">CubeSats</a></h4>
+
+<p>Similar in the way that RDAS will be using the same dimensions. The <a href="http://sail.planetary.org/" target="_blank">LightSail</a> CubeSat is similar to RDAS Drive in the way that the sides fold outwards. Differs in the functionality, but eventually more people will start making CubeSat robots and landers for use on different planets.</p>
+
+<h4><a href="http://www.irobot.com/For-Defense-and-Security/Robots/510-PackBot.aspx#PublicSafety" target="_blank">iRobot Packbot</a></h4>
+
+<p>Similar in the way that it is out in the field, sometimes in harsh environments. Differs in the way that this is a one robot system, whereas RDAS would be distributed across many modules.</p>
+
+<h4><a href="http://mtm.cba.mit.edu/" target="_blank">[m]MTM</a></h4>
+
+<p>Similar in the way that multiple moving parts are connected together. In MTM’s case, this is constructed to move an end-effector. In RDAS’s case, it would be to move an outside object, which may be moved between the various modules to go to a different place. Differs in the overall purpose and construction. There are some neat things that MTM does with Gestalt, and I will look to this for ideas when starting more on linking multiple robots together.</p>
+
+
+
+<h3>Bill of Materials</h3>
+
+<p>A complete bill of materials will be completed with the final project, but here is a rough overview:</p>
+
+<ul>
+<li> PLA filament (online)</li>
+<li> TPE filament (online)</li>
+<li> Microcontrollers - Arduino Pro Mini (online)</li>
+<li> Motors (sacrificed from an older bot)</li>
+<li> Distance sensor (same as above)</li>
+<li> IR reflectance sensor (harvested from e-waste)</li>
+<li> Motor driver - L293D (can’t remember when/where i got these)</li>
+<li> Perf board (gift from Noisebridge)</li>
+<li> LEDs (online)</li>
+<li> Switches and resistors and misc (harvested from e-waste)</li>
+<li> 6-32 screws (sacrificed from other bots)</li>
+</ul>
+
+<p>Estimated cost for RDAS: ~$60</p>
+
+
+
+<h3>Systems & Processes</h3>
+
+<h4>Systems:</h4>
+
+<ul>
+<li> Motor system</li>
+<li> Sensor system (+ communications)</li>
+</ul>
+
+<h4>Processes:</h4>
+
+<ul>
+<li> Driving straight</li>
+<li> Obstacle avoidance</li>
+<li> Tele-op Control</li>
+</ul>
+
+
+
+<h3>Tasks & Questions</h3>
+
+<h4>RDAS Drive</h4>
+
+<p>There are many things wrong with RDAS Drive v0.1, here are the things that I triaged to be fixed in v0.2:</p>
+
+<ol>
+<li> Less screws</li>
+<li> Better internal area for board and batteries</li>
+<li> Wheel angle</li>
+<li> Encoders</li>
+</ol>
+
+<p><b>Better internal area: Time: 8 hours</b><br>
+Can there be proper dimensions of areas that attach to the sides such that they can fit when folded up into the main area? Is there a better way of attaching the vertical pieces for the main area? How tall exactly can this go?</p>
+
+<p><b>Less screws: Time: 15 hours</b><br>
+Is there a way there can be less screws in the design? Perhaps by using 2 screws only on the links, and then 4 screws for each corner. But then how will things be attached to the sides?</p>
+
+<p><b>Wheel angle: Time: 6 hours</b><br>
+Is there a way the wheels can be mounted on a angle, so that way when it touches down, the wheel can be flat on the ground, rather than on its ‘edge’? Can the amount that the wheel sticks out be minimized? Is it better to have the wheel stick out more or less for movement? How can the base sliding on the ground be improved?</p>
+
+<p><b>Encoders: Time: 15 hours</b><br>
+Not exactly a question, but since the robot is going to be re-designed, and v0.1 is currently missing in action, have to fix it.</p>
+
+<p><b>Total time: 44 hours</b></p>
+
+<p>Here are the other tasks needed for making the robot:</p>
+
+<ul>
+<li> Fabrication (3D printing) - 20 hours</li>
+<li> Soldering electronics - 10 hours</li>
+<li> Coding - 15 hours</li>
+<li> Mistakes - 20 hours</li>
+</ul>
+
+<p><b>Total time: 65 hours</b></p>
+
+
+<h4>Video</h4>
+
+<p>Just in case I can’t connect to the mcu on June 10, will have to make a video about the final project</p>
+
+<p>Time: 15 hours</p>
+
+
+<h4>Documentation</h4>
+
+<ul>
+<li> Bill of materials</li>
+<li> Pics</li>
+<li> Words</li>
+<li> Design files</li>
+<li> Call to action!</li>
+</ul>
+
+<p>Time: 20 hours</p>
+
+
+<h4>---</h4>
+
+<p>The timing doesn’t really work out, though these are overestimates. So it’s likely some tasks won’t be able to be met. The tasks that will be skipped will be the ones that would drag down the schedule from being able to have a functional robot on time.</p>
+
+
+
+<h3>Schedule</h3>
+
+<ul>
+<li> Documentation: June 9</li>
+<li> Vid: June 8</li>
+<li> Robot working: June 7 & 8</li>
+<li> Robot fabrication: June 3 & 4 & 5 & 6</li>
+<li> Design: (Currently in progress)</li>
+</ul>
+
+
+
+<h3>Evaluation</h3>
+
+<h4>Functionality:</h4>
+<b>Driving</b><br>
+- can it go in a straight line<br>
+- can it turn accurately to 90 degrees<br>
+- does it work on linoleum floor, carpet, grass, gravel, dirt, table<br>
+
+<b>Sensor</b><br>
+- can it detect obstacles at 15cm<br>
+- how quickly can it detect obstacles<br>
+
+<b>Communication</b><br>
+- does the sensor system communicate with the drive system<br>
+- can it be controlled with the Tele-Op Headband<br>
+
+<b>Other</b><br>
+- is it obvious to other humans what the robot is doing<br>
+
+<h4>Design:</h4>
+<b>Strength</b><br>
+- can it fall off my lab bench and still work<br>
+<b>Weight</b><br>
+- does it weigh less than 5 pounds<br>
+<b>Reliability</b><br>
+- when folding and unfolding, does anything break<br>
+- does anything fall off of the robot<br>
+
+<h4>Fun:</h4>
+- can the robot be anthropomorphized to look like Totoro<br>
+
+
+
+
+      </div>
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+    </div>
+
+
+    </div>
+
+
+    <div id="footer">
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

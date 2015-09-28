@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RobotGrrl - Fab Academy 2015</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <script>
+    function menu() {
+      $('#assignments').load("assignments_menu.html");
+      $('#project').load("project_menu.html");
+      $('#links').load("links_menu.html");
+      $('#footer').load("footer.html");
+    }
+    </script>
+
+  </head>
+  <body onload="menu()">
+
+
+    <!-- nav start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+          </button>
+          <a class="navbar-brand" href="index.html">RobotGrrl - Fab Academy 2015</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></pre></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assignments <span class="caret"></pre></a>
+              <ul id="assignments" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Links <span class="caret"></pre></a>
+              <ul id="links" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="http://fabacademy.org" target="_blank">Fab Academy</a></li>
+            
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- nav end -->
+
+
+    <div class="container">
+
+      <div class="row">
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+
+      <div class="col-md-10">
+
+        <div class="page-header">
+          <h3>v0.3 Try</h3><br>
+        </div>
+
+<p>The goal was to take the learnings from <a href="update13.html">update 13</a> and <a href="update12.html">update 12</a> and make RDAS v0.3 in time for Wednesday but ran in to some mistakes. Here is what I tried!</p>
+
+<p>Since RDAS is bigger than the small flex test cube, some of the other ends of the flexible pieces would have to be able to slide in to the sides. Wanted to create a way for the pieces to slide fit. Multiple tests of this.</p>
+
+<p>Bottom right shows the extruded area of the design. It has a fillet instead of a 90 degree turn for the top part. But it is still hard to print this to exact dimensions because sometimes the extruded filament droops. I thought the fillet would prevent / reduce this, but that did not work.</p>
+
+<img src="images/update14/v03_try_c2.jpg" />
+
+<br><br>
+
+<p>This is how all the degrees of freedom are constrained. Or so I thought. Another mistake is the variance of the printed pieces each time. Sometimes it wiggles inside of its slide rails, sometimes it does not. Eventually I worked the different parameters to be as little wiggle but decent fit as possible.</p>
+
+<img src="images/update14/v03_try_c1.jpg" />
+
+<br><br>
+
+<p>Now for printing the panel pieces assembly. The flex pieces printed first, then the bottom part. This happened to be the best flex-rigid assembly I've made so far</p>
+
+<img src="images/update14/v03_try_c3.jpg" />
+
+<br><br>
+
+<p>A mistake here is that I miscalculated the extrude height of the bottom part. This lead to there only being one layer made, when there should have been two (if it was designed properly).</p>
+
+<p>The reason why this is a problem is because it's possible that when tacking down the flex pieces with hot glue then it can distort that one layer. Though this did not actually end up happening.</p>
+
+<img src="images/update14/v03_try_10.jpg" />
+
+<br><br>
+
+<p>The flex pieces were flush with the surface of the bottom part</p>
+
+<img src="images/update14/v03_try_12.jpg" />
+
+<br><br>
+
+<p>Next was prototyping the connector on a bit bigger scale to fit the bigger connector on the panel links. It took a few tries of modifying the extrude height of the slide rails and the space between to make it right</p>
+
+<img src="images/update14/v03_try_19.jpg" />
+
+<br><br>
+
+<p>This is the side piece with the slide rails on it and the panel assembly slided into it. It fits and this is a good way to now test the folding</p>
+
+<img src="images/update14/v03_try_20.jpg" />
+
+<br><br>
+
+<p>Side view</p>
+
+<img src="images/update14/v03_try_21.jpg" />
+
+<br><br>
+
+<p>Testing how it folds unveiled some mistakes. The first is that there is an end portion of the panels that protrudes past the edge of the side piece. This is not good because the robot needs to fold up to be a cube without things sticking out.</p>
+
+<img src="images/update14/v03_try_22.jpg" />
+
+<br><br>
+
+<p>Folding the panels over the other way means the circle is not aligned properly. The circle is for the clips from the top piece to attach to, for transporting the robot and closing it up.</p>
+
+<img src="images/update14/v03_try_25.jpg" />
+
+<br><br>
+
+<p>Because of the larger connector, the space between the folded panels and the side is the height of the connector. I think I could have made it a smaller way, and it may have prevented this issue</p>
+
+<img src="images/update14/v03_try_26.jpg" />
+
+<br><br>
+
+<p>The other end of the panel that has a connector to go to the next side would be unable to fold upwards- or make a 90 degree angle with the other connector</p>
+
+<img src="images/update14/v03_try_28.jpg" />
+
+<br><br>
+
+<p>Same thing from a different angle</p>
+
+<img src="images/update14/v03_try_29.jpg" />
+
+<br><br>
+
+<p>When designing I did check the dimensions to make sure the panel was less than the side. But my mistake was the total dimension- I didn't check how it would be offset when the link is folded over to align the two circles.</p>
+
+<img src="images/update14/v03_try_30.jpg" />
+
+<br><br>
+
+<p>A fix for the panels with the protruding edge will be to fillet the corner so it does not protrude. Another way would be to increase the link lengths, which would decrease the size of the panels. This way would also fix the other end not being able to sit at 90 degrees to the connector problem too.</p>
+
+<p>A fix for the connector would probably be to try it over again. Make it smaller. But maybe there is a better way to do this with snap fit rather than slide fit.</p>
+
+<p>Can't wait to improve on this and make the v0.3 been thinking about.</p>
+
+
+      </div>
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+    </div>
+
+
+    </div>
+
+
+    <div id="footer">
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

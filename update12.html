@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RobotGrrl - Fab Academy 2015</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <script>
+    function menu() {
+      $('#assignments').load("assignments_menu.html");
+      $('#project').load("project_menu.html");
+      $('#links').load("links_menu.html");
+      $('#footer').load("footer.html");
+    }
+    </script>
+
+  </head>
+  <body onload="menu()">
+
+
+    <!-- nav start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+          </button>
+          <a class="navbar-brand" href="index.html">RobotGrrl - Fab Academy 2015</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></pre></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assignments <span class="caret"></pre></a>
+              <ul id="assignments" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Links <span class="caret"></pre></a>
+              <ul id="links" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="http://fabacademy.org" target="_blank">Fab Academy</a></li>
+            
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- nav end -->
+
+
+    <div class="container">
+
+      <div class="row">
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+
+      <div class="col-md-10">
+
+        <div class="page-header">
+          <h3>Maple Seed Pod</h3><br>
+        </div>
+
+
+<img src="images/update12/maple_pod_26.jpg" />
+
+<br><br>
+
+<img src="images/update12/seed_pod_falling.gif" />
+
+
+<h3>Problem</h3>
+
+<p>My final project (RDAS v0.2), used a lot of screws and I wanted to explore a different way these could be eliminated by having a captive flexible piece within a rigid piece.<br><br>
+
+For this experiment, the rigid material used was PLA. Flexible material was TPE, aka NinjaFlex.<br><br>
+
+Here were some of the requirements:<br></p>
+
+<p>
+<ul>
+<li> Has to be easily replicable</li>
+<li> Single extruder / multiple prints</li>
+<li> Standard fdm 3d printer</li>
+<li> The pieces have to build on each other (not let the nozzle ram in to an existing piece)</li>
+<li> As little confusing as possible</li>
+<li> Bond between both rigid pieces has to be strong</li>
+<li> Captive flexible piece cannot escape / be pulled out</li>
+</ul>
+</p>
+
+<p>Before coming up with the requirements, I was considering various extruders that could switch the filament. Or using dual extruders.<br><br>
+
+Was also looking in to modifying the gcode to eliminate the top layers on the first piece, and the bottom layers on the second piece.</p>
+
+
+
+
+<h3>Acer Pseudoplatanus Samara</h3>
+
+<p>When thinking about what to create as a test print for this, did not want to create just cubes. A maple seed pod would be a good test. Where its wing is more thin, can use flexible material for this. Where the pod is thick- around the seed and the edge of the wing, can use rigid material.</p>
+
+<p>Something neat about maple seed pods is that they spin helically as they fall. Plus with their light weight, they can travel quite far in the wind.</p>
+
+<img src="images/update12/seedrotating_davidlentink.jpg" />
+
+<p><i>Photo: Free flight sequence of an autorotating seed by David Lentink <a href="http://www.asknature.org/strategy/afae7a7ebdb3191e376cd230463a6705#section" target="_blank">[link]</a></i></p>
+
+<p>
+How does this work? A leading edge vortex is created as the seed is falling, creating more lift. It happens that other birds and insects use a similar mechanism too. References: <a href="http://www.sciencemag.org/content/324/5933/1438" target="_blank">[link]</a> <a href="http://www.planta.cn/forum/files_planta/leading_edge_vortices_elevate_lift_of_autorotating_plant_seeds_191.pdf" target="_blank">[link]</a> <a href="http://www.sciencemag.org/content/suppl/2009/06/11/324.5933.1438.DC1/Lentink.SOM.pdf" target="_blank">[link]</a>. This video shows it in action.
+</p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/WLBaIf3ofTs" frameborder="0" allowfullscreen></iframe>
+
+<p>I was also wondering if maybe a modification of these could be used instead / in addition to a parachute for the aeroshell. It probably wouldn't work out to be better than a parachute though.</p>
+
+<p>Here are the goals of this experiment:<br>
+
+<ul>
+<li> Determine the adjustment dimensions for capturing a fleible 3d print within a rigid one</li>
+<li> Determine the offset dimension for stacking two rigid 3d prints on top of eachother</li>
+<li> See how well PLA can be printed on top of NinjaFlex</li>
+<li> See how strong a captive flexible print is</li>
+<li> See how strong (or not strong) clamping a flexible print is between two rigid prints</li>
+<li> Copy the maple seed pod and see if it can also descend helically</li>
+</ul>
+
+<br>
+
+The test was designed to be small yet interesting, so if it was a failure it wouldn't matter much but still something interesting would have been made.
+</p>
+
+
+<h3>Design</h3>
+
+<p>Started out with some real maple seed pods. Take a photo against 5mm grid paper, sketch the outlines in Inkscape and save as dxf</p>
+
+<img src="images/update12/inkscape_tracing.jpg" />
+
+<p>Imported the outlines into Autodesk Inventor, retraced one of them to be used for the design</p>
+
+<img src="images/update12/sketches_seedpods.jpg" />
+
+<p>These are the dimensions for the space between the captive print and rigid print. The wall of the rigid is 1.5mm. Space between the flexible and wall is sp*2, and sp = 0.4mm. The space between the flexible outer edge and what would be cut away from the rigid was just sp</p>
+
+<img src="images/update12/outer_dimensions.jpg" />
+
+<p>The first portion that was cut away from the rigid would be where the edge of the wing would be. Its dimensions are layer*6, so the cutaway added sp_z to it. sp_z = 0.15mm, which is 1/2 of the layer height at 0.3mm</p>
+
+<img src="images/update12/outer_cut1.jpg" />
+
+<p>The other cut away was for the thinner part of the wing. Same as above, but it is only layer*2. Added the extra sp_z offset</p>
+
+<img src="images/update12/outer_cut2.jpg" />
+
+<p>Here is what the outer pod looks like - there is also the addition of a ridge that the wing will also fit into, and the second print will create a "clamp" over it</p>
+
+<img src="images/update12/outer_pod.jpg" />
+
+<p>As is, the ridge would be floating in air so added a base to it. There's a space where generated supports would be: </p>
+
+<img src="images/update12/space_between.jpg" />
+
+<p>This is what the inner pod looks like. There is a second print that is the other half of the seed that will be glued on to it:</p>
+
+<img src="images/update12/inner_pod.jpg" />
+
+<p>Assembly from upper corner: </p>
+
+<img src="images/update12/seedpod_angleview.jpg" />
+
+<p>Assembly from side:</p>
+
+<img src="images/update12/seedpod_sideview.jpg" />
+
+<p>Here are the dimensions:</p>
+
+<a href="https://github.com/RobotGrrl/fabacademy/blob/master/update12/Dimensions/Dimensions.pdf" target="_blank"><img src="images/update12/dimensions.jpg" /></a>
+
+
+
+<h3>Fabricating</h3>
+
+<p>The printer I used was a Makerbot Replicator 1 single extruder.<br><br>
+
+<b>NinjaFlex settings:</b>
+<ul>
+<li> Layer height: 0.3mm</li>
+<li> Infill: 15%</li>
+<li> Shells: 0</li>
+<li> Feedrate: 30mm/s</li>
+<li> Travel rate: 30mm/s</li>
+<li> Build platform temperature: 60 deg C</li>
+<li> Extruder temperature: 230 deg C</li>
+</ul>
+
+<br>
+
+<b>PLA settings:</b><br><br>
+<ul>
+<li> Layer height: 0.3mm</li>
+<li> Infill: 15%</li>
+<li> Shells: 0</li>
+<li> Feedrate: 80mm/s</li>
+<li> Travel rate: 120mm/s</li>
+<li> Build platform temperature: 50 deg C</li>
+<li> Extruder temperature: 230 deg C</li>
+</ul>
+
+</p>
+
+<p>Other half of the seed print was attached with cyanoacrylate</p>
+
+<img src="images/update12/maple_pod_1.jpg" />
+
+<p>The first rigid print is done</p>
+
+<img src="images/update12/maple_pod_2.jpg" />
+
+<p>Placing the flexible print into it</p>
+
+<img src="images/update12/maple_pod_3.jpg" />
+
+<p>It fits nicely into the cut out areas</p>
+
+<img src="images/update12/maple_pod_4.jpg" />
+
+<p>The second print is printed on top of it</p>
+
+<img src="images/update12/maple_pod_5.jpg" />
+
+<p>This is what the clamped portion looks like</p>
+
+<img src="images/update12/maple_pod_6.jpg" />
+
+<p>The bottom of the first piece, with the base still attached</p>
+
+<img src="images/update12/maple_pod_7.jpg" />
+
+<p>Test #1 result</p>
+
+<img src="images/update12/maple_pod_8.jpg" />
+
+<p>The clamp idea did not work well on this test</p>
+
+<img src="images/update12/maple_pod_9.jpg" />
+
+<p>You can see here that the wing is not moving in to the grooves of the shape</p>
+
+<img src="images/update12/maple_pod_10.jpg" />
+
+<p>As well as on the other side too</p>
+
+<img src="images/update12/maple_pod_11.jpg" />
+
+<p>The edge of the captured area</p>
+
+<img src="images/update12/maple_pod_12.jpg" />
+
+<p>Can't tell where the first print ends and the second begins</p>
+
+<img src="images/update12/maple_pod_13.jpg" />
+
+<p>Comparison to actual maple seed pod. (Ours is 2x scale)</p>
+
+<img src="images/update12/maple_pod_14.jpg" />
+
+<p>The captured portion is held in well, was un able to pull it out</p>
+
+<img src="images/update12/maple_pod_15.jpg" />
+
+<p>The clamped portion was easily sepparated from the rigid pieces</p>
+
+<img src="images/update12/maple_pod_16.jpg" />
+
+<p>Test #2- the wing was supported onto the ridge, to see if the second print would better adhere to it</p>
+
+<img src="images/update12/maple_pod_17.jpg" />
+
+<p>Could not make the wing flush with the ridge, always kept buckling like this</p>
+
+<img src="images/update12/maple_pod_18.jpg" />
+
+<p>The result was that it also did not meet the shape profile</p>
+
+<img src="images/update12/maple_pod_19.jpg" />
+
+<p>Test #3- the wing was hot glued onto the ridge</p>
+
+<img src="images/update12/maple_pod_20.jpg" />
+
+<p>It is stuck to the ridge, and in some areas the PLA is not touching anything</p>
+
+<img src="images/update12/maple_pod_21.jpg" />
+
+<p>The result of this one. Can you see the difference of how the wing is attached to the upper portion?</p>
+
+<img src="images/update12/maple_pod_22.jpg" />
+
+<p>Angle of the wing. It worked out well since it was glued to the ridge. Really neat to see how well the shape of the wing is transformed!</p>
+
+<img src="images/update12/maple_pod_23.jpg" />
+
+<p>Here you can see some of the empty space</p>
+
+<img src="images/update12/maple_pod_24.jpg" />
+
+<p>All of the maple seed pods and some real ones too!</p>
+
+<img src="images/update12/maple_pod_25.jpg" />
+
+
+<h3>Evaluation</h3>
+
+<img src="images/update12/seed_pod_falling.gif" />
+
+<p><i>This is the 3d printed seed pod falling</i></p>
+
+<p>The adjustment dimensions worked great. I was really surprised at how well sp_z (0.15mm) did for the vertical space between the rigid and flex print. Also surprised at the combination of the two rigid prints.</p>
+
+<p>It turned out that PLA can somewhat be printed on NinjaFlex, but it really helps to have the flexible piece adhered to it in some way (like with hot glue). Just clamping the piece did not really work. Though, in this design not all of the sides were clamped down. It could be pulled out from almost every direction.</p>
+
+<p>The captive portion of the pieces worked great. It cannot escape no matter how hard I pulled at it. This will be useful for the link pieces in RDAS.</p>
+
+<p><b>Does it work?</b> Not really. It depends on the angle of attack- and it can somewhat spin a bit. The piece is 2x as big and quite a bit heavier than the real maple seed pod. With some modifications such as improving the seed area to be better designed, and making the wing a little less floppy, it's possible that maybe it might work.
+</p>
+
+<p>The experiment was great to find these values that I need. Now I can design a smaller net of a cube and see if it can fold up properly! Then on to v0.3 of RDAS.</p>
+
+
+<h3>Files</h3>
+
+<p>The files are available on <a href="https://github.com/RobotGrrl/fabacademy/tree/master/update12" target="_blank">Github</a>.
+
+<br><br>
+
+<script src="https://embed.github.com/view/3d/RobotGrrl/fabacademy/master/update12/stl/InnerPod.stl"></script>
+
+</p>
+
+      </div>
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+    </div>
+
+
+    </div>
+
+
+    <div id="footer">
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

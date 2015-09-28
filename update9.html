@@ -1,0 +1,495 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RobotGrrl - Fab Academy 2015</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <script>
+    function menu() {
+      $('#assignments').load("assignments_menu.html");
+      $('#project').load("project_menu.html");
+      $('#links').load("links_menu.html");
+      $('#footer').load("footer.html");
+    }
+    </script>
+
+  </head>
+  <body onload="menu()">
+
+
+    <!-- nav start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+          </button>
+          <a class="navbar-brand" href="index.html">RobotGrrl - Fab Academy 2015</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></pre></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assignments <span class="caret"></pre></a>
+              <ul id="assignments" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Links <span class="caret"></pre></a>
+              <ul id="links" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="http://fabacademy.org" target="_blank">Fab Academy</a></li>
+            
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- nav end -->
+
+
+    <div class="container">
+
+      <div class="row">
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+
+      <div class="col-md-10">
+
+        <div class="page-header">
+          <h3>Tele-op Headband v0.2</h3><br>
+        </div>
+
+        <img src="images/update9/headband_fun.jpg" />
+
+        <p>For v0.2 of the Headband there were some key changes that I wanted to make:</p>
+
+        <ul>
+          <li> Lighter weight</li>
+          <li> Laser cut design</li>
+          <li> 6 DOF IMU</li>
+          <li> LEDs in wings</li>
+        </ul>
+
+        <p>If you tuned in to the Final Projects pt 1 and pt2, you might have seen a bit of the Headband v0.2! When it moved, it was reacting to the movement of my head. Here's a vine vid of it in action:</p>
+
+        <iframe src="https://vine.co/v/eO1DrZixaFE/embed/simple" width="480" height="480" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+
+        <br><br>
+
+        <iframe src="https://vine.co/v/emLbVZmwEBz/embed/simple" width="480" height="480" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+
+        <p>The final result ended up being quite light weight. Though the front part of the band sticks out a whopping 2.7cm because of the perfboard for the leds. The wings are 13.5cm tall.</p>
+
+
+
+        <h3>Design & Sheet Metal Tool</h3>
+
+        <p>This is what all of the pieces look like:</p>
+
+        <img src="images/update9/pieces_v1.jpg" />
+
+        <p>These are the cut lignes for the laser cutter:</p>
+
+        <img src="images/update9/cut_lignes.jpg" />
+
+        <p>These are the score lignes for the laser cutter:</p>
+
+        <img src="images/update9/score_lignes.jpg" />
+
+        <p>Here was the test assembly that was used to visually make sure everything will fit together</p>
+
+        <script src="https://embed.github.com/view/3d/RobotGrrl/fabacademy/master/headband_v0.2/Models/Assembly.stl"></script>
+
+        <p>The sheet metal tool in Autodesk Inventor is pretty cool. This was the servo holder generated by folding some pieces:</p>
+
+        <script src="https://embed.github.com/view/3d/RobotGrrl/fabacademy/master/headband_v0.2/Models/ServoHolder.stl"></script>
+
+        <p>Wing servo cover:</p>
+
+        <script src="https://embed.github.com/view/3d/RobotGrrl/fabacademy/master/headband_v0.2/Models/WingCover.stl"></script>
+
+        <p>Wing:</p>
+
+        <script src="https://embed.github.com/view/3d/RobotGrrl/fabacademy/master/headband_v0.2/Models/WingFace.stl"></script>      
+
+        <p>Here are the <a href="https://github.com/RobotGrrl/fabacademy/tree/master/headband_v0.2/Inventor" target="_blank">Inventor design files</a> and the <a href="https://github.com/RobotGrrl/fabacademy/tree/master/headband_v0.2/Drawings" target="_blank">drawings</a></p>
+
+
+
+        <h3>Laser Cutting HDPE</h3>
+
+        <iframe src="https://vine.co/v/emEWxwEHDhY/embed/simple" width="480" height="480" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+
+        <br><br>
+
+        <iframe src="https://vine.co/v/em03bBZP9JI/embed/simple" width="480" height="480" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script>
+
+        <p>For selecting the material, I was debating between delrin and HDPE. HDPE = high density polyethylene.</p>
+
+        <p><h4>HDPE</h4>
+          One of the challenges of laser cutting HDPE is that it absorbs the heat from the laser beam and melts the material. The deformation from the melting sometimes results in the next portion of the cut not being exactly right. It is very flexible, and has a nice smooth surface. ~1/32" thick</p>
+
+        <p><h4>Delrin</h4>
+          Delrin is easier to laser cut, but it can also shatter if there is an impact. Since this is a headband, it's a little worrisome to possibly have shards of it near your eyes. It also did not have the same smooth surface texture as HDPE.</p>
+
+        <p>The only reason to not go with HDPE was the laser cutting. Knowing this I was up to the challenge of finding the right values for cutting through the material and also scoring it with the laser cutter.</p>
+
+        <p>For the laser cutting, the metal bottom tray was used instead of the honeycomb one. The HDPE was attached down to it using the rulers as clamps as well as magnets</p>
+
+        <p><h4>Settings</h4>
+          The settings that I ended up using for cutting were:
+          <ul>
+            <li> Speed: 30%</li>
+            <li> Power: 90%</li>
+            <li> Frequency: 400 Hz</li>
+          </ul>
+        For scoring:
+          <ul>
+          <li> Speed: 90%</li>
+          <li> Power: 60%</li>
+          <li> Frequency: 60 Hz</li>
+          </ul>
+        The machine used was an Epilog mini 60W</p>
+
+        <p>Here was all of the testing:</p>
+
+        <img src="images/update9/hb_lasercut_3.jpg" />
+
+        <br><br>
+
+        <img src="images/update9/hb_lasercut_4.jpg" />
+
+        <br><br>
+
+        <img src="images/update9/hb_lasercut_23.jpg" />
+
+        <br><br>
+
+        <img src="images/update9/hb_lasercut_24.jpg" />
+
+        <br><br>
+
+        <img src="images/update9/hb_lasercut_25.jpg" />
+
+        <p>The material gets melted so much that it forms little strands on the edge of the pieces:</p>
+
+        <img src="images/update9/hb_lasercut_1.jpg" />
+
+        <p>Example of score lines in action:</p>
+
+        <img src="images/update9/hb_lasercut_2.jpg" />
+
+        <p>Can you see what pieces were cut here?</p>
+
+        <img src="images/update9/hb_lasercut_27.jpg" />
+
+        <br><br>
+
+        <img src="images/update9/hb_lasercut_28.jpg" />
+
+        <p>The cover for the wing and the servo holder!</p>
+
+        <img src="images/update9/hb_lasercut_29.jpg" />
+
+        <br><br>
+
+        <img src="images/update9/hb_lasercut_30.jpg" />
+
+        <p>Another photo of the melted strands</p>
+
+        <img src="images/update9/hb_lasercut_32.jpg" />
+
+        <p>Trying to laser cut small features in HDPE did not work well. All of the edges melted close together</p>
+
+        <img src="images/update9/hb_lasercut_35.jpg" />
+
+        <p>The HDPE was curled in a roll, so for some of the pieces there was a curve in them. This mattered for the wings, for which directions the scored tabs were bent.</p>
+
+        <img src="images/update9/hb_lasercut_36.jpg" />
+
+
+
+        <h3>Assembly</h3>
+
+        <p>Here is how the pieces were assembled</p>
+
+        <p>Pieces hot glued together (is there a bettery way to do this?). The coloured design was added prior. I hand drew it with neon sharpie. The reason why I had to hand draw it was because the sharpie did not fit into the holder for an xy plotter robot (Watercolor Bot), and didn't have access to a 3d printer at that instant (at night) to make one. In the future this will be drawn by a bot.</p>
+
+        <img src="images/update9/hb_assembly_2.jpg" />
+
+        <p>The servos added to the servo holders</p>
+
+        <img src="images/update9/hb_assembly_4.jpg" />
+
+        <p>Bottom view:</p>
+
+        <img src="images/update9/hb_assembly_5.jpg" />
+
+        <p>Little place for the wire:</p>
+
+        <img src="images/update9/hb_assembly_6.jpg" />
+
+        <p>Here's how the servo holder folded over and on to the band:</p>
+
+        <img src="images/update9/hb_assembly_7.jpg" />
+
+        <p>There's so many colours on the desk!!!!!!!!!!!</p>
+
+        <img src="images/update9/hb_assembly_10.jpg" />
+
+        <p>The leds for the wings are bent to an angle. This way they will light them up better</p>
+
+        <img src="images/update9/hb_assembly_11.jpg" />
+
+        <p>LED inside of the wing</p>
+
+        <img src="images/update9/hb_assembly_24.jpg" />
+
+        <p>Here's what it looks like lit up</p>
+
+        <img src="images/update9/hb_assembly_12.jpg" />
+
+        <br><br>
+
+        <img src="images/update9/hb_assembly_14.jpg" />
+
+        <p>It's neon sharpie that is supposed to florese under UV light. It sort of glows with blue colour</p>
+
+        <img src="images/update9/hb_assembly_26.jpg" />
+
+        <p>Side view of wing</p>
+
+        <img src="images/update9/hb_assembly_28.jpg" />
+
+        <p>Here was the start of assembling the band of leds for the front. Ran in to some problems doing it this way though. Whenever trying to solder the wires together, another wire would fall off. It took 2h to just make these 3 leds work</p>
+
+        <img src="images/update9/hb_assembly_13.jpg" />
+
+        <p>The evil mad scientists suggested to attach the leds to perfboard, and it would be easier to solder. To cut the board, used these HUUUGE scissors</p>
+
+        <img src="images/update9/hb_assembly_15.jpg" />
+
+        <p>Here's what the small perfboards look like</p>
+
+        <img src="images/update9/hb_assembly_16.jpg" />
+
+        <p>One downside to using the perfboards is that they did add a bit of height to the leds</p>
+
+        <img src="images/update9/hb_assembly_17.jpg" />
+
+        <p>Top view</p>
+
+        <img src="images/update9/hb_assembly_18.jpg" />
+
+        <p>Servo back angle view. At that moment I did not have a better way of mounting the servo horn other than cardboard and hot glue. Next time it will be different.</p>
+
+        <img src="images/update9/hb_assembly_19.jpg" />
+
+        <p>Placement of the microcontroller</p>
+
+        <img src="images/update9/hb_assembly_20.jpg" />
+
+        <p>Is there a better way to be able to attach these pin headers to the band?</p>
+
+        <img src="images/update9/hb_assembly_21.jpg" />
+
+        <p>Servo side view</p>
+
+        <img src="images/update9/hb_assembly_22.jpg" />
+
+        <p>Wing cover front view. The shape stuck out too much, so I cut down two of the folds</p>
+
+        <img src="images/update9/hb_assembly_23.jpg" />
+
+        <p>Front view lit up</p>
+
+        <img src="images/update9/hb_assembly_25.jpg" />
+
+        <p>Closer view of front view</p>
+
+        <img src="images/update9/hb_assembly_27.jpg" />
+
+        <p>"Electronics"</p>
+
+        <img src="images/update9/hb_assembly_29.jpg" />
+
+
+
+
+        <h3>Electronics (not really)</h3>
+
+        <p>The electronics are breakout boards made and designed by someone else. In the future I want to mill my own circuit boards for this and have the components to solder on to it. Check out <a href="week10.html">Input Devices week</a> for the boards I was trying to design.</p>
+
+        <ul>
+          <li> <a href="http://shop.evilmadscientist.com/productsmenu/785" target="_blank">Pro Trinket</a> (ATmega328 with Optiboot)</li>
+          <li> <a href="http://shop.evilmadscientist.com/productsmenu/partsmenu/714" target="_blank">ADXL335</a> (Accelerometer)</li>
+          <li> <a href="http://shop.evilmadscientist.com/productsmenu/786" target="_blank">L3GD20H</a> (Gyro)</li>
+          <li> <a href="https://www.sparkfun.com/products/8665" target="_blank">Xbee 1mW Series 1</a></li>
+          <li> <a href="https://www.sparkfun.com/products/11373" target="_blank">Xbee breakout board</a></li>
+          <li> 7x <a href="http://shop.evilmadscientist.com/productsmenu/765" target="_blank">5mm bullet pixel leds</a></li>
+          <li> 2x <a href="http://www.robotshop.com/ca/en/dfrobot-micro-servo-motor.html" target="_blank">micro servos</a> (*Note: Looks like these insanely went up in price...)</li>
+          <li> <a href="http://pulsesensor.com/products/pulse-sensor-amped" target="_blank">Pulse sensor</a></li>
+          <li> 2x tactile buttons</li>
+        </ul>
+
+        <!-- todo wiring diagram -->
+
+
+
+
+        <h3>Code</h3>
+
+        <p>Sorry the code is horrible. I cleaned up the formatting a bit, but it can still be a lot better. Disappointed because I couldn't get any readings from the accelerometer, so there isn't much of any fun motion tracking. Instead, just comparing the gyro to a threshold to detect the movements. There isn't anything complicated or original in the code. The reason why the code is horrible is because I was in a rush to finish this for the final project.</p>
+
+        <p>Libraries used:</p>
+
+        <ul>
+          <li> <a href="https://github.com/adafruit/Adafruit_L3GD20" target="_blank">Adafruit_L3GD20</a></li>
+          <li> <a href="https://github.com/adafruit/Adafruit_NeoPixel" target="_blank">Adafruit_NeoPixel</a></li>
+          <li> <a href="https://github.com/adafruit/Adafruit_TiCoServo" target="_blank">Adafruit_TiCoServo</a></li>
+          <li> <a href="http://arduiniana.org/libraries/streaming/" target="_blank">Streaming</a></li>
+          <li> <a href="https://github.com/RobotGrrl/Promulgate" target="_blank">Promulgate</a></li>
+          <li> SoftwareSerial</li>
+          <li> Wire</li>
+        </ul>
+
+        <p>For a jist of what is going on, here is what's inside the loop:</p>
+
+<pre class="prettyprint">
+  current_time = millis();
+    
+  updateGyro();
+  
+  checkGyroBounds();
+  
+  detectMotionZ();
+  
+  detectMotionX();
+  
+  wingWiggleBehaviour();
+    
+  heartbeatBehaviour();
+    
+  checkCommunication();     
+</pre>
+
+
+        <p>The wing wiggle behaviour is only called every 7 seconds, as long as the last gyro trigger was more than 3 seconds ago.</p>
+
+        <p>You can download the code <a href="#" target="_blank">here</a>.</p>
+        <!-- todo: add link -->
+
+
+
+
+        <h3>Mistakes Made</h3>
+
+        <ul>
+
+        <li> <p>Laser cutting small features in HDPE</p> </li>
+
+        <li> <p>Forgot to increase the length of the pieces to account for the curvature</p> </li>
+
+        <li> <p>Not making a dedicated electronics board for it</p> </li>
+
+        <li> <p>Receiving garbled messages over Xbee RX (still debugging)</p> </li>
+
+        <li> <p>Marks your head if you wear it too long</p> </li>
+
+        <li> <p>Not checking if a sharpie could fit into xy plotter holder</p> </li>
+
+        <li> <p>Trying to solder 3 wires onto a short place without a perf board</p> </li>
+
+        <li> <p>Hot gluing servo horn to cardboard</p> </li>
+
+        <li> <p>Wing cover stuck out too much</p> </li>
+
+        <li> <p>LED on other wing doesn't light up (still debugging)</p> </li>
+
+        <li> <p>Accelerometer did not update values (still debugging)</p> </li>
+
+        </ul>
+
+
+
+
+        <h3>Ideas for Headband v0.3 & v0.4</h3>
+
+        <p>For v0.3 I mainly want to do three things: make the code better, clean up the wiring, and figure out why the led on the other wing and accelerometer does not work</p>
+
+        <p>For v0.4, if I ever get HDPE and access to a laser cutter again, I want to cut the cover pieces to the correct dimensions. As well as some other fixes and improvements.</p>
+
+        <p>Another thought is that one of the weaknesses for the HDPE was the heat. But this could be used as an advantage. If I create a mold on the cnc machine and then add heat to a piece of the HDPE, it will take shape to the mold. Might be neat to explore this for the band shape and wings.</p>
+
+
+
+        <h3>Files</h3>
+
+        <p>You can download all the files on <a href="https://github.com/RobotGrrl/fabacademy/tree/master/headband_v0.2" target="_blank">Github</a></p>
+
+
+
+        <h3>Conclusion</h3>
+
+        <p>The battery life for the Headband is around 4 hours using a 2600mAh cellphone charger battery. This is on "normal" mode when the wings wiggle every 7 seconds and while responding to my movements.</p>
+
+        <p>My favourite thing about the Headband is that if I wear it, it usually makes people around me a bit more cheerful, and mostly everyone wants to wear it too. Kind of surprised at this because I made it to control my robots easier inspired by BH6. People seem to have a lot of fun with it even though it's not perfect and very much cobbled together (except for the laser cutting part).</p>
+
+        <p><i>Special thank you to <a href="http://evilmadscience.com" target="_blank">Evil Mad Science</a> for their resources and help</i></p>
+
+
+
+      </div>
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+    </div>
+
+
+    </div>
+
+
+    <div id="footer">
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

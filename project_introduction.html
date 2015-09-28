@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RobotGrrl - Fab Academy 2015</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+    function menu() {
+      $('#assignments').load("assignments_menu.html");
+      $('#project').load("project_menu.html");
+      $('#links').load("links_menu.html");
+      $('#footer').load("footer.html");
+    }
+    </script>
+
+  </head>
+  <body onload="menu()">
+
+
+    <!-- nav start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">RobotGrrl - Fab Academy 2015</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></span></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assignments <span class="caret"></span></a>
+              <ul id="assignments" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Links <span class="caret"></span></a>
+              <ul id="links" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="http://fabacademy.org" target="_blank">Fab Academy</a></li>
+            
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- nav end -->
+
+
+    <div class="container">
+
+      <div class="row">
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+
+      <div class="col-md-10">
+
+        <div class="page-header">
+          <h3>Rapidly Deployable Automation System</h3>
+        </div>
+
+        <br><br>
+
+        <center><a href="presentation.png" target="_blank"><img src="presentation.png" width="640" height="512" /></a></center>
+
+        <br><br>
+
+        <h3>Overview</h3>
+
+        <p><a href="https://www.youtube.com/watch?v=SmOp0LuSqw4" target="_blank"><b>Video:</b></a></p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SmOp0LuSqw4" frameborder="0" allowfullscreen></iframe>
+
+        <br>
+
+        <p><a href="https://www.youtube.com/watch?v=Bjto28C4-hI" target="_blank"><b>Clips of current robot functionality:</b></a></p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Bjto28C4-hI" frameborder="0" allowfullscreen></iframe>
+
+        <br>
+
+        <p>For my final project, the problem that we are trying to tackle is being able to rapidly deploy a system of automated movement. Instead of the objects around us being stationary, what if we could enable them to move around and interact with us. We could use robot modules that link together to combine steps of movements.</p>
+
+        <p>The moonshot of this idea is to eventually have it used in natural disaster settings during the humanitarian efforts. Imagine unpacking a backpack full of these robot modules, and assembling them to perform some task like distributing food through a line faster. Or sorting specific medical supplies to go to one area. Maybe even something as crazy as being able to dig out areas for standing water to flow away from temporary shelter locations.</p>
+
+        <h3>Technical Description</h3>
+
+        <p>First we will be creating two of the robot modules on a smaller scale (10cm). The robot modules will each be attached to a base that is an hexagon shape. This will allow lattice formations of the different modules together.</p>
+
+        <p>Their connection will be able to pass current, used for sending and receiving data, and ground. Each robot will be powered individually, since each one has a different purpose and will have different power requirements.</p>
+
+        <p>Overall communication with the modules will be using an interface board- either through buttons or gestures.</p>
+
+        <p>A web app will show details about the systems behaviours, and each of the module’s actions or senses.</p>
+
+        <h3>Prior Art</h3>
+        <p><i>Coming soon</i></p>
+
+        <h3>Development Milestones</h3>
+
+        <b>Mechanical</b>
+        <ul>
+          <li> Octagon base design</li>
+          <li> Robot 1</li>
+          <li> Robot 2</li>
+        </ul>
+
+        <b>Electronics</b>
+        <ul>
+          <li> Robot controller (sensors and motors)</li>
+          <li> Interface board (either buttons or gestures)</li>
+          <li> Communication between robots and interface</li>
+        </ul>
+
+        <b>Programming</b>
+        <ul>
+          <li> API</li>
+          <li> Basic interface</li>
+        </ul>
+
+        <b>Demo</b>
+        <ul>
+          <li> Tie it all together</li>
+        </ul>
+
+        <h3>Preliminary Sketches</h3>
+
+        <center><a href="https://www.flickr.com/photos/robotgrrl/16439783081/" target="_blank"><img src="images/week1/sketches_3.jpg" /></a>
+
+        <br>
+
+        Shows the octagon base of the robot
+
+        </center>
+
+        <br><br>
+
+        <center><a href="https://www.flickr.com/photos/robotgrrl/16440616612/in/photostream/" target="_blank"><img src="images/week1/sketches_2.jpg" /></a>
+
+        <br>        
+
+        This is more of a scribble than a sketch. It’s supposed to be an expandable drive train for one of the robots. Kind of hard to draw.
+
+        </center>
+
+        <br><br>
+
+        <center><a href="https://www.flickr.com/photos/robotgrrl/15819035834/in/photostream/" target="_blank"><img src="images/week1/sketches_1.jpg" /></a>
+
+        <br>
+
+        Cardboard model of how the octagon folds up
+
+        </center>
+
+        
+
+        <h3>Notes</h3>
+
+        <p>There are some areas of concern with this idea that have not been entirely flushed out yet. For example, how will the system know what to do? If there are 10^9 modules, how does the overarching behaviour of what the user wants the system to do get split into clusters of the modules, and then to each individual module?</p>
+
+        <p>And even more questions- how will the system heal itself if one module breaks? How can sensors be added to the system to make the behaviour dynamic?</p>
+
+
+      </div>
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+    </div>
+
+
+    </div>
+
+
+    <div id="footer">
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!-- "Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning." - Albert Einstein -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RobotGrrl - Fab Academy 2015</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <script>
+    function menu() {
+      $('#assignments').load("assignments_menu.html");
+      $('#project').load("project_menu.html");
+      $('#links').load("links_menu.html");
+      $('#footer').load("footer.html");
+    }
+    </script>
+
+  </head>
+  <body onload="menu()">
+
+
+    <!-- nav start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+          </button>
+          <a class="navbar-brand" href="index.html">RobotGrrl - Fab Academy 2015</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></pre></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assignments <span class="caret"></pre></a>
+              <ul id="assignments" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Links <span class="caret"></pre></a>
+              <ul id="links" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="http://fabacademy.org" target="_blank">Fab Academy</a></li>
+            
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- nav end -->
+
+
+    <div class="container">
+
+      <div class="row">
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+
+      <div class="col-md-10">
+
+        <div class="page-header">
+          <h3>Electronics Design</h3>
+        </div>
+
+
+<h3>Designing</h3>
+
+<p>The board, designed in gEDA:</p>
+
+<center><img src="images/week6/demo_board.jpg" /></center>
+
+<p>First tried the cad in the compiled fab modules, but found that it took me a considerable amount of time for adding each wire (and the points too). Too slow to make a change, then press a button to refresh, then make another change -- when a mouse could be used. So switched back to gEDA.</p>
+
+<center><img src="images/week6/design_progress.jpg" width="100%" /></center>
+
+<p>Downloaded some of the relevant footprints from <a href="http://www.gedasymbols.org/" target="_blank">gedasymbols.org</a>. The ISP and FTDI header needed fixing. Referred to the <a href="http://www.brorson.com/gEDA/land_patterns_20070818.pdf" target="_blank">land patterns document</a>, and fixed them with a text editor. Had to make the button and crystal footprints.
+  <br><br>
+Photo above:
+<br>
+Top left: components on an angle in the fab modules cad
+<br>
+Top right: trying the qfn version of the ATtiny44 -- the routing didn't work out
+<br>
+Bottom left: everything is connected, still have to clean up the routing
+<br>
+Bottom right: cleaned up routing and looking at board in gEDA's "3D" mode
+</p>
+
+<p>The traces were 6 mil with 6 mil clearance. If the traces need to be changed for a specific machine, this can be done by changing the Line[...] items inside of Layer(1 "top").
+<br><br>
+The copper fill is a ground plane. Some of the pads connect to it (tricky to see in first photo)</p>
+
+
+<h3>Fabricating</h3>
+
+<p>Will be doing this when going to EchoFab.</p>
+
+
+
+
+<h3>Design Files</h3>
+
+<p>You can find all of the source files in my <a href="https://github.com/RobotGrrl/fabacademy/tree/master/week6" target="_blank">repository</a></p>
+
+
+
+
+      </div>
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+    </div>
+
+
+    </div>
+
+
+    <div id="footer">
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,311 @@
+<!-- Live long and prosper \ \\// -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RobotGrrl - Fab Academy 2015</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <script>
+    function menu() {
+      $('#assignments').load("assignments_menu.html");
+      $('#project').load("project_menu.html");
+      $('#links').load("links_menu.html");
+      $('#footer').load("footer.html");
+    }
+    </script>
+
+  </head>
+  <body onload="menu()">
+
+
+    <!-- nav start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+          </button>
+          <a class="navbar-brand" href="index.html">RobotGrrl - Fab Academy 2015</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></pre></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assignments <span class="caret"></pre></a>
+              <ul id="assignments" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Links <span class="caret"></pre></a>
+              <ul id="links" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="http://fabacademy.org" target="_blank">Fab Academy</a></li>
+            
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- nav end -->
+
+
+    <div class="container">
+
+      <div class="row">
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+
+      <div class="col-md-10">
+
+        <div class="page-header">
+          <h3>3D Scanning and Printing</h3>
+        </div>
+
+
+<h3>Rotational Flexure Mechanism</h3>
+
+<p>3D printed in PLA, actuated using a micro servo + paper clip:</p>
+
+<center><iframe src="https://vine.co/v/O0MIJhn6AKz/embed/simple" width="480" height="480" frameborder="0"></iframe><script src="https://platform.vine.co/static/scripts/embed.js"></script></center>
+
+<br><br>
+
+<center><img src="images/week5/flex_mech_prototype.jpg" width="100%" /></center>
+
+<h3>Making Of</h3>
+
+<center><img src="images/week5/flexure_print_abs.jpg" width="100%" /></center>
+
+<p>This design is based on the <a href="http://www.researchgate.net/profile/Larry_Howell4/publication/265644711_Flex-16_A_large-displacement_monolithic_compliant_rotational_hinge/links/5422de340cf238c6ea6e1298.pdf" target="_blank">Flex-16 mechanism</a>. It has a large displacement for rotating. Something interesting about their design- it’s completely parametric, so it has examples made with cnc milling and all the way down to fabrication for MEMS.
+<br><br>
+Here was some test 2 layer prints of the mech to see how it works, with some variations in the design:</p>
+
+<center><img src="images/week5/rotational_flexure_testing.jpg" width="100%" /></center>
+
+<p>The changes I made to the original mech design was to make the sharp edges rounded. The material seemed to be less stressed this way- less visible white lines from bending. 
+<br><br>
+Designing this for 3d printing- the flexible features were only 1mm in width to make sure that there would be no in-fill pattern. If there was an in-fill, it could change the way the piece flexes.
+<br><br>
+In the design, there are holes within the flexible features. The idea was to make it more sparse for more flexibility. This would only be possible with additive manufacturing, since a multi-axis cnc mill would be too large to fit between the features to drill the holes.
+<br><br>
+The tab on the left is borked because I accidentally left Cool on when slicing. Cool sets a minimum time per layer, giving filament time to cool. My printer settings tend to retract too much during cool, and not extrude fast enough when starting again.</p>
+
+<center><img src="images/week5/flexure_print_details.jpg" width="100%" /></center>
+
+<p>Here were some of the mishaps at 3d printing it:</p>
+
+<center><img src="images/week5/flexure_printing_fails.jpg" width="100%" /></center>
+
+<p>Bottom- The thin features, condition of the build surface (air bubbles, tears) lead to the first layer not adhering properly to the build platform.
+<br><br>
+Top left- The solution to this problem was to add small 1 layer circles to the corners of the design.
+<br><br>
+Top right- When switching materials from ABS to TPE, the filament was being extruded slightly anemic. The solution to fixing it was to increase the extruder temp to 230 deg C, and re-level the build platform.
+<br><br>
+The mech that was printed in TPE (NinjaFlex) was very floppy. It would not be useful in the robot design.</p>
+
+<center><img src="images/week5/flexure_print_tpe.jpg" width="100%" /></center>
+
+<p>There were some design flaws:</p>
+
+<center><img src="images/week5/prototype_design_flaws.jpg" width="100%" /></center>
+
+<p>Top left- In order for the screw to not extend past the base ‘spacers’, it needed a washer
+<br><br>
+Top right- If the screw extended past the base ‘spacers’ then the assembly would be resting on 4 screws. Not as stable. Also the base printed in PLA was too flexible. Should have made it loner.
+<br><br>
+Bottom- The middle screw did not fit will with the servo in place. Did not need 3 screws per side anyway.
+<br><br>
+Overall, the mechanism moves too much into the z-axis. It may be because the design I made was not the exact dimensions as theirs. Making the prototype was still useful, as would not have realised this otherwise! I have an idea for a design to try based off of this one that might improve the desired movement.</p>
+
+
+<br>
+
+<hr>
+
+<br>
+
+<h3>Post Processing Scan into Antimony</h3>
+
+<center><img src="images/week5/fablab_logo_sb.jpg" width="100%" /></center>
+
+<p>I wanted to be able to display slices of 3d objects in Antimony. The idea was to blend some of the slices together to create interesting combinations.
+<br><br>
+Ended up not being able to complete the idea, but learned a lot during the process of trying!</p>
+
+
+
+<h3>Learning about Function Representations</h3>
+
+
+<p>Asked for help on the mailing list about how the functions worked. Thanks to Neil for pointing me in a right direction to learn more about this, and thanks to Troy for the suggestion about Meshlab.
+<br><br>
+In <a href="http://cba.mit.edu/docs/theses/13.05.Keeter.pdf" target="_blank">Matt’s thesis</a>, Chapter 3 is all about functional representations, and Appendix A has info about the math strings too.
+<br><br>
+It’s complicated information to parse, but I still wanted to try it out.
+<br><br>
+<i>Warning: It’s possible that all of my info below is completely wrong</i>
+<br><br>
+I kept getting confused trying to follow the algorithm, because was not sure what the word arguments was referring to. But by using the original tree in figure 3-2 as a guide, it can be figured out.
+<br><br>
+First try was to re-create rectangle corner. Luckily the f-rep expression is in the comments. This plus the string and a vague idea about how the graph works, was able to figure out how the string is formatted.</p>
+
+<center><img src="images/week5/f-rep_rectangle_corner.jpg" width="100%" /></center>
+
+<p>In this first try how I made it work was to just go through the tree starting at the node that has not been recorded yet. It took so long to figure this out...
+<br><br>
+Then I tried a different way, by recording the very last nodes and grouping it with their operation. This is what the square brackets are for showing. Here it is with Polygon:
+</p>
+
+<center><img src="images/week5/f-rep_polygon.jpg" width="100%" /></center>
+
+<p>Trying to re-create the annulus from the example graph in Matt’s thesis was difficult. I could never get the -1 to work because there was only one node attached to it. If that makes sense. Not really sure where I was going wrong.
+<br><br>
+Tried to use a * and then with a -1 and the others, and it worked.</p>
+
+<center><img src="images/week5/f-rep_annulus.jpg" width="100%" /></center>
+
+<p>Now it was finally time to dive in to the idea. At first I wanted to create a triangle that fits in a rectangle by subtracting two right triangles from it (right hand side). Then taking this idea further, maybe it could create a diamond by subtracting four right triangles.
+</p>
+
+<center><img src="images/week5/f-rep_shape_idea.jpg" width="100%" /></center>
+
+<p>To try it out, was playing in Antimony with the right triangle and then noticed that it disappears if the width or height goes negative.
+<br><br>
+This was my try at fixing it. It did not work at all!!!!!!!
+</p>
+
+<center><img src="images/week5/f-rep_triangle.jpg" width="100%" /></center>
+
+<p>The result were these weird shapes that would move in patterns, and sometimes it would display a hockey stick.</p>
+
+<center><img src="images/week5/fail_triangle.jpg" width="100%" /></center>
+
+<p>One of the stumbling blocks is that not really sure what all of the max, min, and expressions are all about. Would probably be able to make more shapes if I understood this more. Found <a href="http://fab.cba.mit.edu/classes/S62.12/representation.html" target="_blank">this page</a> which might have some helpful info on it -- didn’t see this until Tuesday evening though.
+<br><br>
+Also only realised to check shapes.py for the triangle function until later. Should have thought of that sooner.</p>
+
+
+
+
+<h3>Finding Points</h3>
+
+<p>Still wanted to go ahead with the idea even though could not make the triangle shape function work. The next step was to get the xy points from a slice in the model.
+<br><br>
+Sliced a 3d model of the Stanford Bunny using Autodesk 123D Make. It exports images of each slice as an .eps file. Some of the images contained two slices of the model, so I had to manually edit those.
+<br><br>
+Created a sketch in Processing to scan the image for pixels that had a red value of < 200. It then recorded the location of the point, and could export the x,y to a text file.
+<br><br>
+First I tried attaching triangles from two of the points to the centroid. It did not work!
+</p>
+
+<center><img src="images/week5/tri_top_view.jpg" width="100%" /></center>
+
+<p>The reason why is because the points were not ordered to be adjacent to each other. They were in order of the scan- which was just going through the image in the x direction and then moving down the y direction.
+<br><br>
+I tried to redo the program so that it detects the points in error. The cursor would go in one direction, then look at the other directions to see if the pixel was less than the threshold. But it kept running in to the problem where in a tight space it would keep going in the same pattern of movements. I couldn’t figure it out. There are other ways of solving this problem that probably would be better too.
+<br><br>
+Sometimes there would be a problem that too many points were trying to be displayed in Antimony, it would slow down too much. Added an option in the sketch to skip every so many points in the Processing sketch. This helps with not generating too many points, and you get a similar representation to the outline of the shape. </p>
+
+
+
+
+<h3>Reading.node</h3>
+
+<p>To display all of the shapes where the points are, I created a node. Here are three of them in action, used to display the pieces of the Fab Lab logo:</p>
+
+<center><img src="images/week5/reader_fab_logo.jpg" width="100%" /></center>
+
+<p>The node has an input for the file path to a text file. This text file contains the x,y points that the Processing sketch generated. The python script then loops through all of the points, and displays the shape.
+<br><br>
+Originally I wanted to be able to take an input of a shape and use that shape for the points, however I could not make it work. Also, the parameters sometimes vary between shapes.
+<br><br>
+There’s still some improvements to be made with the script. For example, handling errors if it can’t open the file and also handling the parsing of the text file (may want to include more information at some point).
+</p>
+
+
+
+<h3>Result</h3>
+
+<p>I didn’t realise that the slices from 123D Make were not aligned in any way. So when first processing and displaying them, it resulted a funny looking artifact. After aligning the slices and re-doing it again, it sort of resembles a bunny-</p>
+
+<center><img src="images/week5/bunny_sb.jpg" width="100%" /></center>
+
+
+<br>
+
+<hr>
+
+<br>
+
+
+<h3>Lessons Learned</h3>
+
+<ul>
+<li> It was challenging and a struggle to learn how the function strings are created. But eventually was able to re-make some of them. Learned a lot from doing this.</li>
+<li> Probably tried to tackle too much for 1 week ... but ended up learning way more than I would have otherwise! Noted that it’s not a sustainable effort level.</li>
+<li> Designing with flexure mechanisms is going to be tricky to constrain the movements in specific axis’</li>
+<li> Decision making process: Usually I start out with what I want to make, try some things, and go from there. It will be useful going forwards if I ask *how* it should happen too. For example, I knew points were needed, but not how they were needed- they needed to be in order for the triangles to work.</li>
+</ul>
+
+
+
+<h3>Design Files</h3>
+
+<p>You can find all of the source files in my <a href="https://github.com/RobotGrrl/fabacademy/tree/master/week5" target="_blank">repository</a></p>
+
+
+
+
+      </div>
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+    </div>
+
+
+    </div>
+
+
+    <div id="footer">
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

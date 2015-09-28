@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RobotGrrl - Fab Academy 2015</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <script>
+    function menu() {
+      $('#assignments').load("assignments_menu.html");
+      $('#project').load("project_menu.html");
+      $('#links').load("links_menu.html");
+      $('#footer').load("footer.html");
+    }
+    </script>
+
+  </head>
+  <body onload="menu()">
+
+
+    <!-- nav start -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+            <span class="icon-bar"></pre>
+          </button>
+          <a class="navbar-brand" href="index.html">RobotGrrl - Fab Academy 2015</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Final Project <span class="caret"></pre></a>
+              <ul id="project" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Assignments <span class="caret"></pre></a>
+              <ul id="assignments" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Links <span class="caret"></pre></a>
+              <ul id="links" class="dropdown-menu" role="menu">
+              </ul>
+            </li>
+
+            <li><a href="about.html">About</a></li>
+
+            <li><a href="http://fabacademy.org" target="_blank">Fab Academy</a></li>
+            
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- nav end -->
+
+
+    <div class="container">
+
+      <div class="row">
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+
+      <div class="col-md-10">
+
+        <div class="page-header">
+          <h3>Computer-Controlled Cutting</h3>
+        </div>
+
+
+
+<h3>Beginning</h3>
+
+<p>During the lecture Neil mentioned about XY Flexure Mechanisms <a href="http://academy.cba.mit.edu/classes/computer_cutting/56836505.pdf" target="_blank">[1]</a> <a href="http://www-personal.umich.edu/~awtar/PHD/phd_mit.htm" target="_blank">[2]</a>. It’s a double parallelogram using flexures that can move an output in one axis. By combining the mechs together it can create a different movement, like a two-axis planer.
+<br><br>
+Made a quick cardboard construction to see how it works:</p>
+
+<center><img src="images/week3/cardboard_mech.jpg" width="100%" /></center>
+
+<p>I was interested in finding out if adding multiple in the same axis of movement would have a chain effect to the movement of the main stage. How much less would it move for each mech stacked on top? How can these be combined to create a certain pattern of movement? Also was wondering what changes would have to be made to the design to fabricate it out of cardboard on a laser cutter.
+<br><br>
+Creating a press fit construction kit is a good way to experiment to start answering the questions.</p>
+
+
+
+<h3>Modeling in Antimony</h3>
+
+
+<p>The first thing I started to model was the connection method. It is the snap-lock from the <a href="http://mtm.cba.mit.edu/machines/mtm_snap-lock/index.html" target="_blank">MTM</a>. The middle part keeps the pieces aligned, and the outer clips can snap the pieces together.</p>
+
+<p>My approach to the design was to reflect everything in the middle of the main rectangle. At the end of the main rectangle is an end piece. The two rectangles on the clip could be adjusted to be wider and closer together. Changing the material dimension would effect the height of the middle piece, and the distance to the bottom of the rectangle/triangle part of the clip.</p>
+
+<center><img src="images/week3/antimony_snap_lock.jpg" width="100%" /></center>
+
+<p>Next up I wanted to create a model for a parametric flexure design. The plan I decided to go with was to divide the width by 11 and create lines that are 3 times that amount. One row would have two lines, the other three. It was neat to be able to visually see the design change as various parameters were adjusted.</p>
+
+<center><img src="images/week3/antimony_flexure.jpg" width="100%" /></center>
+
+<p>Now time to start the basic mechanism piece! Here you can see the flexure model being used. The width of the structure around it can change. The flexures can become taller, making the overall mech taller too. Likewise for the space between flexures. The distance to the output stage can also change.</p>
+
+<center><img src="images/week3/antimony_mech_start.jpg" width="100%" /></center>
+
+<p>Added to the design to create matching attachment pieces. I changed from the snap lock to three squares because of the size. There were a lot of pieces that were dependent on the input parameters.</p>
+
+<center><img src="images/week3/antimony_mech.jpg" width="100%" /></center>
+
+<p>The design ended up being too complicated and leading to a big fail. Details in the next section below.</p>
+
+
+
+<h3>Mistakes Made</h3>
+
+<p>Made a lot of errors while modeling. Learned a tough way about how to *not* do things.
+<br><br>
+I wanted to make a way to use the snap lock connector as flush instead of at 90 degrees. The design was not working out for me. I kept confusing the parameters and mixing everything up. Here was a mishap of trying to align the middle tab. Which should have been easy since the coordinates would be based off of the rectangle/2.</p>
+
+<center><img src="images/week3/mistake1.jpg" /></center>
+
+<p>Next was the area for the clip. I tried changing numerous parameters but couldn’t make it align properly. Guess I just messed it up.</p>
+
+<center><img src="images/week3/mistake2.jpg" /></center>
+
+<p>Similar problems with aligning the slots on the mech piece. How I eventually ended up fixing this was with a ‘construction’ rectangle, whos values I could use to align the tabs better.</p>
+
+<center><img src="images/week3/mistake3.jpg" /></center>
+
+<p>Now for the worst mistake ever. When creating the mech and linking pieces, I never really closed out of the file and opened it again. When it happened that I had to open the file, I couldn’t. It’s too big, and my computer runs out of memory.</p>
+
+<center><img src="images/week3/mistake4.jpg" /></center>
+
+<p>Just to clarify, this is not Antimony's fault. There were a lot better ways that I could have designed the mech and linking pieces. For instance, I made each little shape its own node. I should have been creating scripts with multiple shapes in it, and doing some of the iterations and unions in there.</p>
+
+<p>Another way it could have been designed better was if the linking pieces were in another file. Although it would have been more annoying to input the values from the different files, at least I still would have been able to open them.</p>
+
+<p>The design of the mech isn’t entirely parametric. If you adjust it, some of the shapes do not adjust as they should. Another mistake was making a wobbly tower of parameters that was too confusing to figure out each time. It was just too over-complicated.</p>
+
+
+
+<h3>Modeling in Autodesk Inventor</h3>
+
+<p>I decided to re-create similar pieces in Autodesk Inventor. I created a common part file that contained the dimensions for the material and kerf values. This was then linked in to each of the individual parts. A quick way of updating the parameters is with an assembly file.
+<br><br>
+For testing, I designed 5 mech pieces with minor differences:</p>
+
+<center><img src="images/week3/all_mechs.jpg" width="100%" /></center>
+
+<p>Here are all of the pieces:</p>
+
+<center><img src="images/week3/all_pieces.jpg" width="100%" /></center>
+
+<p>The models of the pieces were each extruded, then their base projected onto the drawing. Projecting just the 2D sketch would also show the constructions lines. Export as dxf, make sure the model scaling is ‘base view scale - model space’, as this is 1:1.</p>
+
+<p>Open the dxf in Inkscape. Make sure automatic scaling to A4 is unchecked. The scale factor should be 1. From there, it can be edited for preparation to be laser cut.</p>
+
+
+
+<h3>Mistakes Made</h3>
+
+<p>I messed up the pattern on the flexures, but the bigger mistake was not realising this until much of the design was built up. At that point, there were a lot of constraints added. So when going in to fix it, this is what happened:</p>
+
+<center><img src="images/week3/constraints.jpg" width="100%" /></center>
+
+<p>Another fail occurred when I was duplicating the design files. I opened the base part before copying the common part (the part with the parameters), which lead to the base losing its reference to the linked dimensions. It confused me for a while as to what was happening after not seeing the base updating properly.</p>
+
+<center><img src="images/week3/base_not_updated.jpg" /></center>
+
+
+
+<h3>Laser Cutting</h3>
+
+<p>The main laser cutter that is local to my city is currently unopperational. One of the mirrors is cracked, and the replacement is stuck in customs. Unfortunately other laser cutters nearby are exclusively for “real” students -- as if to say working on interesting projects and robots is not real.</p>
+
+<p>So I reached out to a few friends with laser cutters. They agreed to run some test cuts! Cool!
+<br><br>
+Recycling some cardboard with laser cutting the design:</p>
+
+<center><img src="images/week3/friends_laser1.jpg" width="100%" /></center>
+
+<p>The cardboard was quite thin, and had a tricky time of attaching together. But a construction was still managed to be created:</p>
+
+<center><img src="images/week3/friends_laser2.jpg" width="100%" /></center>
+
+<p>Another go at it, with 3mm mdf this time:</p>
+
+<center><img src="images/week3/friends_laser3.jpg" width="100%" /></center>
+
+<p>Feedback from both people was that the mechanism can move side to side just fine! Though, the flexures were weak in the z direction and some ended up breaking off.</p>
+
+<p>For the first pass at laser cutting the mdf, the kerf value was a little off which caused the link pieces to be just a tiny amount too big for attaching to the mech.</p>
+
+<p>Many thanks to <a href="http://www.duino-robotics.com/" target="_blank">Jaidyn Edwards</a> and <a href="http://baldwisdom.com/" target="_blank">Kevin Osborn</a> for their help with laser cutting the pieces!</p>
+
+<p>When I go to <a href="http://www.echofab.org/" target="_blank">EchoFab</a>, I will be laser cutting the pieces and observing the movements even more closely to see which of the five mech designs works the best.</p>
+
+
+
+<h3>Flex Boards + Vinyl Cutter Notes</h3>
+
+<p>I’m excited to try making some flex circuits at EchoFab with a vinyl cutter there (hopefully). Here are some notes about things to keep in mind when doing this:</p>
+
+<ul>
+<li> Settings to adjust: force, speed, cut depth</li>
+<li> The settings will change day to day</li>
+<li> Check the holder of the knife, and check the blade</li>
+<li> There is a sequence to the cutting,</li>
+<li> Need to do test cuts</li>
+<li> Backing of the copper tape is designed to pull away - do not do the weeding on this</li>
+<li> Use masking tape to lift everything off,</li>
+<li> Apply to some sort of new backing</li>
+<li> Press it! Activate the adhesive on the copper tape!</li>
+<li> Pull the unwanted pieces away, in plane,</li>
+<li> Shearing makes it harder for the other traces to peel up</li>
+</ul>
+
+
+
+<h3>Summary</h3>
+
+<p>Trying to design the pieces as fully parametric in Antimony was challenging. In the future, I think I would go for semi-parametric designs, like the ones made in Autodesk Inventor, just to create quick prorotypes of ideas. After seeing which one is best, then design it in Antimony to make it fully parametric.</p>
+
+<p>Struggled a lot with the dimensions of various lengths and relating them to other shapes. Especially when combining with more shapes, it became confusing.</p>
+
+<p>Of course, with all this said, it is nice to be able to adjust a few parameters and be able to make a few pieces on a 3d printer. For example, the flexure of this was updated a bit and the kerf changed to -0.4 (the size of the nozzle * -1).</p>
+
+<center><img src="images/week3/mech_flex_3dp.jpg" width="100%" /></center>
+
+<p>Excited to laser cut the design and try it out. Also have a better idea for a flexure, for next time.</p>
+
+
+
+<h3>Design Files</h3>
+
+<p>You can find all of the source files in my <a href="https://github.com/RobotGrrl/fabacademy/tree/master/week3" target="_blank">repository</a></p>
+
+
+
+      </div>
+
+      <div class="col-md-1">
+        &nbsp;
+      </div>
+    </div>
+
+
+    </div>
+
+
+    <div id="footer">
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>
